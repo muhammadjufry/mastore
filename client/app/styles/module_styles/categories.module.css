@@ -1,0 +1,21 @@
+.categories {
+    padding: 20px;
+}
+
+.categories ul {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    gap: 20px;
+}
+
+.categories ul li {
+    width: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    gap: 5px;
+    padding: 12px;
+    border-radius: 10px;
+}

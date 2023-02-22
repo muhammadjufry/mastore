@@ -1,0 +1,86 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 25px 20px;
+  gap: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  top: 0;
+}
+
+.row1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menuToggle {
+  width: 25px;
+  height: 25px;
+  fill: black;
+  color: black;
+}
+
+.logo {
+  font-weight: 600;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icons {
+  width: 25px;
+  cursor: pointer;
+  height: 25px;
+}
+
+.row2 {
+  width: 100%;
+}
+
+.search {
+  width: 100%;
+}
+
+.formSearch {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 1px solid grey;
+  border-right: none;
+}
+
+.searchIcon {
+  width: 41.7px;
+  height: 41.7px;
+  padding: 7px 9px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+
+.searchIcon svg {
+  position: relative;
+  top: 2px;
+}
