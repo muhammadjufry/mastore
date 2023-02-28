@@ -1,0 +1,155 @@
+.productDetail {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.imageIcons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width:88%;
+    justify-content: space-between;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.imageIconsRight {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.imageIcons svg {
+    width: 32px;
+    height: 32px;
+    background-color:orange;
+    fill: white;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.imageIcons > svg {
+    background-color: transparent;
+    fill: white;
+    padding: 0;
+}
+
+.productDetailImage {
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.productDetailInfo {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.productDetailInfo h3 {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.productDetailInfo h4 {
+    color: grey;
+}
+
+.productRatingAndSell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+}
+
+.productStar {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    position: relative;
+}
+
+.productStarIcon {
+    width: 20px;
+    height: 20px;
+    fill: orange;
+    color: orange;
+}
+
+.sellerInfo {
+    padding: 15px 0;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 15px;
+}
+
+.sellerProfile {
+    position: relative;
+}
+
+.sellerProfile img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.offline {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: grey;
+    bottom: 10px;
+    right: 5px;
+}
+
+.sellerActivityAndInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sellerActivityAndInfo span {
+    font-weight: bold;
+}
+
+.sellerActivityAndInfo p {
+    font-size: 14px
+}
+
+.sellerActivityAndInfo svg {
+    position: relative;
+    top: 4px;
+}
+
+.productHeadingDesc {
+    font-weight: 600;
+    margin-top: 7px;
+}
+
+.productDescription {
+    font-size: 14px;
+    line-height: 32px;
+    color: grey;
+    margin-bottom: 55px;
+}
+
+.buyNow {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border:none;
+    background-color: orange;
+    color: white;
+    padding: 15px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}

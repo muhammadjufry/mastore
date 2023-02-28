@@ -1,0 +1,62 @@
+.productForUser {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.productForUser ul li {
+    margin-bottom: 20px;
+    background-color: white;
+    cursor: pointer;
+    border: 1px solid grey;
+}
+
+.productImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.productInfo {
+    padding: 10px;
+}
+
+.productTitle {
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.productRatingAndSell {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.productStar {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    position: relative;
+}
+
+.productStarIcon {
+    width: 20px;
+    height: 20px;
+    fill: orange;
+    color: orange;
+}
+
+.halfStar {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    position: absolute;
+    right: -9px
+}
+
+.productShortDesc {
+    color: grey;
+    font-size: 13px;
+    margin: 2.5px 0;
+}

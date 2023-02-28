@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -38,25 +38,34 @@ main {
   position: relative;
 }
 
-/* 
-Needed only in laptop or desktop screen
-.owl-theme .owl-nav {
+.categoriesCarousel .owl-dots {
   display: none;
-  width: 100%;
-  justify-content: space-between;
-  padding: 0 10px;
-  position: absolute !important;
-  margin-top: 0 !important;
-  top: 40%;
 }
 
+.categoriesCarousel .owl-stage {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
 
-.owl-nav button span {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 0;
-  font-family: "Poppins", sans-serif;
-  color: black;
-  transition: all 0.2s ease-in !important;
-} 
-*/
+.categoriesCarousel li {
+  width: 65px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 13px;
+  font-weight: bold;
+  gap: 5px;
+  padding: 12px;
+  border-radius: 10px;
+  margin-right: 7px;
+}
+
+.categoriesCarousel .owl-item:last-child {
+  padding-left: 10px;
+}
+
+.categoriesCarousel .owl-stage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

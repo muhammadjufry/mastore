@@ -1,3 +1,10 @@
 /server/node_modules
 /server/build
 /client/node_modules
+/node_modules
+/package-lock.json
+/yarn.lock
+/client/package-lock.json
+/client/yarn.lock
+/server/package-lock.json
+/server/yarn.lock
