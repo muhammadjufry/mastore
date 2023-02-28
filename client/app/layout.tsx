@@ -13,13 +13,9 @@ export default function RootLayout({
     setLoading(false);
   };
 
-  const handleUnload = () => {
-    setLoading(true);
-  };
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      window.addEventListener('load', handleLoad);
-      window.addEventListener('beforeunload', handleUnload);
+      window.addEventListener('DOMContentLoaded', handleLoad);
     }
   }, [])
   return (
