@@ -1,0 +1,92 @@
+import { Link } from "react-router-dom";
+import ModeEditIcon from "@mui/icons-material/ModeEdit";
+import HelpIcon from "@mui/icons-material/Help";
+import ChatIcon from "@mui/icons-material/Chat";
+import PaymentsIcon from "@mui/icons-material/Payments";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import SettingsIcon from "@mui/icons-material/Settings";
+import LogoutIcon from "@mui/icons-material/Logout";
+import BlankProfilePic from "../../assets/images/user-profile-images/empty-profile-picture.jpg";
+import {
+  UserDashboardHeader,
+  UserProfileInfo,
+  UserDashboardBody,
+} from "./index.styles";
+
+import PageHeader from "../PageHeader";
+type Props = {};
+
+function Index({}: Props) {
+  return (
+    <>
+      <PageHeader withCartIcon={false} />
+      <div style={{ padding: "0 20px" }}>
+        <div className="container">
+          <UserDashboardHeader>
+            <div className="row2">
+              <div className="userProfile">
+                <img
+                  src={BlankProfilePic}
+                  alt="empty-profile-picture"
+                  className="userProfileImg"
+                />
+                <UserProfileInfo>
+                  <h4 className="userProfileName">Profile name</h4>
+                  <span>5 Followers | 5 Following</span>
+                </UserProfileInfo>
+              </div>
+              <ModeEditIcon />
+            </div>
+          </UserDashboardHeader>
+          <UserDashboardBody>
+            <ul className="links">
+              <li>
+                <Link to="/user/setting">
+                  Account setting <SettingsIcon />
+                </Link>
+              </li>
+              <li>
+                <Link to="/user/edit-profile">
+                  Edit profile <ModeEditIcon />
+                </Link>
+              </li>
+              <li>
+                <Link to="/user/order">Orders</Link>
+              </li>
+              <li>
+                <Link to="/user/cart">
+                  Cart <ShoppingCartIcon />
+                </Link>
+              </li>
+              <li>
+                <Link to="/user/payment">
+                  Payment <PaymentsIcon />
+                </Link>
+              </li>
+              <li>
+                <Link to="/user/message">
+                  Chat <ChatIcon />
+                </Link>
+              </li>
+              <li>
+                <Link to="/user/become-seller">Become seller</Link>
+              </li>
+              <li>
+                <Link to="/user/help">
+                  Help <HelpIcon />
+                </Link>
+              </li>
+              <li>
+                <Link to="/user/logout">
+                  Logout <LogoutIcon />
+                </Link>
+              </li>
+            </ul>
+          </UserDashboardBody>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default Index;

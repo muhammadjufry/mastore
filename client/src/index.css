@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --swiper-pagination-bottom: 20px;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+input {
+  font-family: "Poppins", sans-serif !important;
+}
+
+.pageDefaultStyle {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.mantine-Carousel-control {
+  margin-left: 20px;
+}
+.mantine-Carousel-control:last-child {
+  margin-right: 20px;
+}
+
+.mantine-Carousel-indicators {
+  position: absolute;
+  bottom: 25px;
+}
+
+.mantine-Carousel-slide img {
+  height: 100%;
+}
+
+.mantine-18hke69,
+.mantine-1jciivq {
+  height: 36px;
+  min-height: 36px;
+  border-radius: 0 !important;
+}
+
+.mantine-18hke69:first-child {
+  border-right: none;
+}
+.mantine-18hke69:last-child {
+  border-left: none;
+}
+
+.header .pageHeader {
+  display: none;
+}
+
+.header header {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .header .pageHeader {
+    display: flex;
+  }
+
+  .header header {
+    display: none;
+  }
+}
