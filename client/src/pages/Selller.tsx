@@ -1,11 +1,10 @@
-import SellerDashboard from "../components/Seller"
+import SellerDashboard from "../components/Seller";
+import React from "react";
 
-type Props = {}
+type Props = {};
 
 function Seller({}: Props) {
-  return (
-    <SellerDashboard />
-  )
+  return <SellerDashboard />;
 }
 
-export default Seller
+export default Seller;
