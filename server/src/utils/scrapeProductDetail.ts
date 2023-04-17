@@ -10,7 +10,7 @@ export default async function scrapeProducts(url: string): Promise<any> {
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
     });
     const page = await context.newPage();
-    await page.goto(url);
+    await page.goto(url, { timeout: 0 });
     await page.waitForLoadState("domcontentloaded");
     const getProductDetail = async (page: Page) => {
       return await page.evaluate(() => {
@@ -19,19 +19,22 @@ export default async function scrapeProducts(url: string): Promise<any> {
           document.querySelector<HTMLElement>("#productTitle")!?.innerText;
         let image =
           document.querySelector<HTMLImageElement>("#landingImage")!?.src;
+
         let price = document.querySelector<HTMLElement>(
-          "#priceblock_ourprice"
+          "#corePrice_feature_div > div > span.a-price.aok-align-center > span.a-offscreen"
         )!?.innerText;
         let description = document.querySelector<HTMLElement>(
-          "#renewedProgramDescriptionAtf"
+          "#featurebullets_feature_div"
+        )!?.textContent;
+        let stockLeft = document.querySelector<HTMLElement>(
+          "#availability > span"
         )!?.innerText;
-        let productSource = url;
         result.push({
           title,
           image,
           price,
           description,
-          productSource,
+          stockLeft,
         });
         return result;
       });
