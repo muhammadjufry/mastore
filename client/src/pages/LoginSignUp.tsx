@@ -1,14 +1,18 @@
 import Header from "../components/HomePage/Header";
 import LoginSignUpForm from "../components/LoginSignUp";
 
-type Props = {};
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
-function Login({}: Props) {
+function Login({ isUserLoggedIn }: Props) {
   return (
     <>
-      <Header />
+      <Header isUserLoggedIn={isUserLoggedIn} />
       <div className="pageDefaultStyle">
-        <LoginSignUpForm />
+        <div className="container">
+          <LoginSignUpForm />
+        </div>
       </div>
     </>
   );

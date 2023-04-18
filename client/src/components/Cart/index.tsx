@@ -25,10 +25,18 @@ import {
 import PageHeader from "../PageHeader";
 import { Link } from "react-router-dom";
 
-const Index = () => {
+type Props = {
+  isUserLoggedIn: boolean;
+};
+
+const Index = ({ isUserLoggedIn }: Props) => {
   return (
     <Cart>
-      <PageHeader pageName="Cart" withCartIcon={true} />
+      <PageHeader
+        pageName="Cart"
+        withCartIcon={true}
+        isUserLoggedIn={isUserLoggedIn}
+      />
       <br />
       <div style={{ padding: "0 20px" }}>
         <div className="container">

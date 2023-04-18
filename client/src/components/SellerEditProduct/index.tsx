@@ -11,12 +11,14 @@ import Underline from "@tiptap/extension-underline";
 import TextAlign from "@tiptap/extension-text-align";
 import Superscript from "@tiptap/extension-superscript";
 import SubScript from "@tiptap/extension-subscript";
-type Props = {};
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
 const content =
   '<h2>Product Tittle</h2><p>Product Description <a href="https://example.com/" rel="noopener noreferrer" target="_blank">Link</a> rest description</p><ul><li>List</li><li>List</li><li>List</li><li>List</li><li>List</li></ul>';
 
-function index({}: Props) {
+function index({ isUserLoggedIn }: Props) {
   const editor = useEditor({
     extensions: [
       StarterKit,

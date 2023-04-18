@@ -17,9 +17,11 @@ import {
 } from "./index.styles";
 import VisaImg from "../../assets/images/payment-method/visa.png";
 
-type Props = {};
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
-function Payment({}: Props) {
+function Payment({ isUserLoggedIn }: Props) {
   return (
     <>
       <SellerPageHeader pageName="Payment Setting" />

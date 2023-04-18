@@ -10,10 +10,18 @@ import DoneIcon from "../../assets/icons/successfully-after-checkout-done/done.w
 import { Link } from "react-router-dom";
 import PageHeader from "../PageHeader";
 
-const SuccessfullyAfterCheckout = () => {
+type Props = {
+  isUserLoggedIn: boolean;
+};
+
+const SuccessfullyAfterCheckout = ({ isUserLoggedIn }: Props) => {
   return (
     <>
-      <PageHeader pageName="Done after checkout" withCartIcon={true} />
+      <PageHeader
+        pageName="Done after checkout"
+        withCartIcon={true}
+        isUserLoggedIn={isUserLoggedIn}
+      />
       <div style={{ padding: "0 20px" }}>
         <div className="container">
           <br />

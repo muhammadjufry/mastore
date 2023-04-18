@@ -11,9 +11,11 @@ import {
 } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
 
-type Props = {};
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
-function Help({}: Props) {
+function Help({ isUserLoggedIn }: Props) {
   return (
     <>
       <SellerPageHeader pageName="Help" />
@@ -76,7 +78,7 @@ const actions: SpotlightAction[] = [
   },
 ];
 
-function index() {
+function index({ isUserLoggedIn }: Props) {
   return (
     <SpotlightProvider
       actions={actions}
@@ -85,7 +87,7 @@ function index() {
       shortcut="mod + shift + 1"
       nothingFoundMessage="Nothing found..."
     >
-      <Help />
+      <Help isUserLoggedIn={isUserLoggedIn} />
     </SpotlightProvider>
   );
 }

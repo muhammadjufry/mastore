@@ -1,9 +1,11 @@
 import { PeopleQuestionDetail, HelpAnswer } from "./index.styles";
 import SellerPageHeader from "../SellerPageHeader";
 import { Avatar } from "@mantine/core";
-type Props = {};
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
-function Index({}: Props) {
+function Index({ isUserLoggedIn }: Props) {
   return (
     <>
       <SellerPageHeader pageName="User question" />

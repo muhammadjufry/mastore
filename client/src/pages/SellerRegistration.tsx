@@ -1,11 +1,11 @@
-import BecomeSellerRegistration from "../components/BecomeSeller/Registration"
+import BecomeSellerRegistration from "../components/BecomeSeller/Registration";
 
-type Props = {}
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
-function SellerRegistration({}: Props) {
-  return (
-    <BecomeSellerRegistration />
-  )
+function SellerRegistration({ isUserLoggedIn }: Props) {
+  return <BecomeSellerRegistration />;
 }
 
-export default SellerRegistration
+export default SellerRegistration;

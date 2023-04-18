@@ -13,9 +13,11 @@ import { Tabs } from "@mantine/core";
 import SellerPageHeader from "../SellerPageHeader";
 import { Link } from "react-router-dom";
 
-type Props = {};
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
-function index({}: Props) {
+function index({ isUserLoggedIn }: Props) {
   return (
     <>
       <SellerPageHeader pageName="Order" />

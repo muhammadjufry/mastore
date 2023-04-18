@@ -1,8 +1,10 @@
 import HelpDashboard from "../components/Help";
 
-type Props = {};
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
-function Help({}: Props) {
+function Help({ isUserLoggedIn }: Props) {
   return <HelpDashboard />;
 }
 

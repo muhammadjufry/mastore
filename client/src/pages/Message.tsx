@@ -1,11 +1,11 @@
-import MessageLists from "../components/Message"
+import MessageLists from "../components/Message";
 
-type Props = {}
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
-function Message({}: Props) {
-  return (
-    <MessageLists />
-  )
+function Message({ isUserLoggedIn }: Props) {
+  return <MessageLists />;
 }
 
-export default Message
+export default Message;

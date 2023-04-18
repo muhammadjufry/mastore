@@ -12,8 +12,10 @@ import {
   Anchor,
   Button,
 } from "@mantine/core";
-import { TwitterIcon } from "@mantine/ds";
+import axios from "axios";
+import { useState } from "react";
 import { Stack, FormLinks } from "./index.styles";
+import { useNavigate } from "react-router-dom";
 
 export function GoogleIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
@@ -46,46 +48,97 @@ export function GoogleIcon(props: React.ComponentPropsWithoutRef<"svg">) {
 }
 
 export default function Index(props: PaperProps) {
+  const navigate = useNavigate();
   const [type, toggle] = useToggle(["login", "register"]);
+  const [errorMessage, setErrorMessage] = useState("");
   const form = useForm({
     initialValues: {
       email: "",
+      username: "",
       name: "",
       password: "",
+      confirmPassword: "",
+      phoneNumber: "",
+      address: "",
       terms: true,
-    },
-
-    validate: {
-      email: (val) => (/^\S+@\S+$/.test(val) ? null : "Invalid email"),
-      password: (val) =>
-        val.length <= 6
-          ? "Password should include at least 6 characters"
-          : null,
     },
   });
 
+  const register_user = async () => {
+    try {
+      const url = "http://localhost:8080/api/v1/user/register";
+      const body = {
+        name: form.values.name,
+        username: form.values.username,
+        email: form.values.email,
+        password: form.values.password,
+        confirmPassword: form.values.confirmPassword,
+        cartId: `${form.values.username}CartId`,
+        orderId: `${form.values.username}OrderId`,
+        phoneNumber: form.values.phoneNumber,
+        address: form.values.address,
+        following: "0",
+        follower: "0",
+      };
+      console.log(url, body);
+      const postRequest = await axios.post(url, body);
+      alert("A verfication link sent to your email please verify it!");
+      console.log(postRequest);
+      navigate("/", {
+        replace: true,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const login_user = async () => {
+    try {
+      const url = "http://localhost:8080/api/v1/user/login";
+      const body = {
+        email: form.values.email,
+        password: form.values.password,
+        confirmPassword: form.values.confirmPassword,
+      };
+      console.log(url, body);
+      const postRequest = await axios.post(url, body);
+      localStorage.setItem("user-token-login", postRequest.data.userTokenLogin);
+      console.log(postRequest);
+      navigate("/", {
+        replace: true,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <Paper radius="md" p="xs" {...props}>
-      <Text size="lg" weight={500} style={{ textAlign: "center" }}>
+      <Text
+        size="lg"
+        weight={500}
+        style={{
+          textAlign: "center",
+          fontFamily: "Poppins, sans-serif",
+          fontWeight: "600",
+        }}
+      >
         MA-STORE - {upperFirst(type)}
       </Text>
 
-      <Group grow mb="md" mt="md">
+      <Group mb="md" mt="md" position="center">
         <Button
           leftIcon={<GoogleIcon />}
           variant="default"
           color="gray"
-          radius="xl"
+          styles={() => ({
+            root: {
+              width: "300px",
+            },
+          })}
+          radius="md"
         >
-          Google
-        </Button>
-        <Button
-          component="a"
-          leftIcon={<TwitterIcon size="1rem" color="#00ACEE" />}
-          variant="default"
-          radius="xl"
-        >
-          Twitter
+          {type === "register" ? "Sign Up with Google" : "Sign In with Google"}
         </Button>
       </Group>
 
@@ -94,16 +147,28 @@ export default function Index(props: PaperProps) {
       <form onSubmit={form.onSubmit(() => {})}>
         <Stack>
           {type === "register" && (
-            <TextInput
-              label="Name"
-              placeholder="Your name"
-              value={form.values.name}
-              onChange={(event) =>
-                form.setFieldValue("name", event.currentTarget.value)
-              }
-              radius="md"
-              size="xs"
-            />
+            <>
+              <TextInput
+                label="Name"
+                placeholder="Your name"
+                value={form.values.name}
+                onChange={(event) =>
+                  form.setFieldValue("name", event.currentTarget.value)
+                }
+                radius="md"
+                size="xs"
+              />
+              <TextInput
+                label="Username"
+                placeholder="your-name-332"
+                value={form.values.username}
+                onChange={(event) =>
+                  form.setFieldValue("username", event.currentTarget.value)
+                }
+                radius="md"
+                size="xs"
+              />
+            </>
           )}
 
           <TextInput
@@ -119,6 +184,31 @@ export default function Index(props: PaperProps) {
             size="xs"
           />
 
+          {type === "register" && (
+            <>
+              <TextInput
+                label="Phone number"
+                placeholder="000 XXX XXXX"
+                value={form.values.phoneNumber}
+                onChange={(event) =>
+                  form.setFieldValue("phoneNumber", event.currentTarget.value)
+                }
+                radius="md"
+                size="xs"
+              />
+              <TextInput
+                label="Address"
+                placeholder="Street 023 USA"
+                value={form.values.address}
+                onChange={(event) =>
+                  form.setFieldValue("address", event.currentTarget.value)
+                }
+                radius="md"
+                size="xs"
+              />
+            </>
+          )}
+
           <PasswordInput
             required
             label="Password"
@@ -131,6 +221,19 @@ export default function Index(props: PaperProps) {
               form.errors.password &&
               "Password should include at least 6 characters"
             }
+            radius="md"
+            size="xs"
+          />
+
+          <PasswordInput
+            required
+            label="Confirm Password"
+            placeholder="Confirm Password"
+            value={form.values.confirmPassword}
+            onChange={(event) =>
+              form.setFieldValue("confirmPassword", event.currentTarget.value)
+            }
+            error={errorMessage}
             radius="md"
             size="xs"
           />
@@ -170,18 +273,35 @@ export default function Index(props: PaperProps) {
             </Anchor>
           </FormLinks>
         </Group>
-        <Button
-          type="submit"
-          radius="md"
-          size="xs"
-          styles={() => ({
-            root: {
-              marginTop: "15px",
-            },
-          })}
-        >
-          {upperFirst(type)}
-        </Button>
+        {type === "register" ? (
+          <Button
+            type="submit"
+            radius="md"
+            size="xs"
+            styles={() => ({
+              root: {
+                marginTop: "15px",
+              },
+            })}
+            onClick={() => register_user()}
+          >
+            Register
+          </Button>
+        ) : (
+          <Button
+            type="submit"
+            radius="md"
+            size="xs"
+            styles={() => ({
+              root: {
+                marginTop: "15px",
+              },
+            })}
+            onClick={() => login_user()}
+          >
+            Login
+          </Button>
+        )}
       </form>
     </Paper>
   );

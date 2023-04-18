@@ -6,9 +6,11 @@ import AliExpressImg from "../../assets/images/dropship-online-store/aliExpress.
 import EbayImg from "../../assets/images/dropship-online-store/ebay.svg";
 import WalmartImg from "../../assets/images/dropship-online-store/walmart.svg";
 
-type Props = {};
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
-function index({}: Props) {
+function index({ isUserLoggedIn }: Props) {
   return (
     <>
       <SellerPageHeader pageName="Add another store" />

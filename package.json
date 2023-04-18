@@ -1,0 +1,25 @@
+{
+  "name": "dropship-shop",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "backend-dev": "cd client && npm run dev",
+    "frontend-dev": "cd server && nodemon src/index.ts",
+    "dev": "concurrently \"npm:backend-dev\" \"npm:frontend-dev\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muhammadjufry/mastore.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muhammadjufry/mastore/issues"
+  },
+  "homepage": "https://github.com/muhammadjufry/mastore#readme",
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
+}

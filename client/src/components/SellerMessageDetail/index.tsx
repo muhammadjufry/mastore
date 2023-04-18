@@ -14,8 +14,10 @@ import { Input } from "@mantine/core";
 import { useNavigate } from "react-router-dom";
 import { Indicator, Avatar, Group } from "@mantine/core";
 import BlankProfilePic from "../../assets/images/user-profile-images/empty-profile-picture.jpg";
-type Props = {};
-function Index({}: Props) {
+type Props = {
+  isUserLoggedIn: boolean;
+};
+function Index({ isUserLoggedIn }: Props) {
   const navigate = useNavigate();
   return (
     <>

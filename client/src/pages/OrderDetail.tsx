@@ -1,11 +1,10 @@
-import OrderDetailItem from "../components/OrderDetail"
+import OrderDetailItem from "../components/OrderDetail";
 
-type Props = {}
-
-function OrderDetail({}: Props) {
-  return (
-    <OrderDetailItem />
-  )
+type Props = {
+  isUserLoggedIn: boolean;
+};
+function OrderDetail({ isUserLoggedIn }: Props) {
+  return <OrderDetailItem />;
 }
 
-export default OrderDetail
+export default OrderDetail;

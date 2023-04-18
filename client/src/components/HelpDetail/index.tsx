@@ -1,9 +1,11 @@
 import { PeopleQuestionDetail, HelpAnswer } from "./index.styles";
 import PageHeader from "../PageHeader";
 import { Avatar } from "@mantine/core";
-type Props = {};
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
-function Index({}: Props) {
+function Index({ isUserLoggedIn }: Props) {
   return (
     <div className="pageDefaultStyle">
       <PageHeader pageName="User question" withCartIcon={true} />

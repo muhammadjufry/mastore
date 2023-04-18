@@ -1,8 +1,10 @@
 import React from "react";
 
-type Props = {};
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
-function index({}: Props) {
+function index({ isUserLoggedIn }: Props) {
   return <div>index</div>;
 }
 

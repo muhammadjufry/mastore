@@ -1,8 +1,10 @@
 import ForgotPasswordForm from "../components/ForgotPassword";
 
-type Props = {};
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
-function ForgotPassword({}: Props) {
+function ForgotPassword({ isUserLoggedIn }: Props) {
   return (
     <div className="pageDefaultStyle">
       <ForgotPasswordForm />

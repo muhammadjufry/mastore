@@ -15,9 +15,11 @@ import SubScript from "@tiptap/extension-subscript";
 const content =
   '<h2>Product Tittle</h2><p>Product Description <a href="https://example.com/" rel="noopener noreferrer" target="_blank">Link</a> rest description</p><ul><li>List</li><li>List</li><li>List</li><li>List</li><li>List</li></ul>';
 
-type Props = {};
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
-function index({}: Props) {
+function index({ isUserLoggedIn }: Props) {
   const editor = useEditor({
     extensions: [
       StarterKit,

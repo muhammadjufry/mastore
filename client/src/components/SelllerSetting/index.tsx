@@ -2,9 +2,11 @@ import React from "react";
 import SellerPageHeader from "../SellerPageHeader";
 import { SellerSettingLists } from "./index.styles";
 
-type Props = {};
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
-function index({}: Props) {
+function index({ isUserLoggedIn }: Props) {
   return (
     <>
       <SellerPageHeader pageName="Seller Settings" />

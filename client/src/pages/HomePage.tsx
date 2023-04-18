@@ -5,7 +5,9 @@ import MostPopularProducts from "../components/HomePage/MostPopularProducts";
 import ProductLists from "../components/HomePage/ProductLists";
 import Footer from "../components/Footer";
 
-type Props = {};
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
 const Data = [
   {
@@ -44,10 +46,10 @@ const Data = [
   },
 ];
 
-function HomePage({}: Props) {
+function HomePage({ isUserLoggedIn }: Props) {
   return (
     <>
-      <Header />
+      <Header isUserLoggedIn={isUserLoggedIn} />
       <Hero />
       <Categories />
       <MostPopularProducts />

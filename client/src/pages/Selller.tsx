@@ -1,9 +1,11 @@
 import SellerDashboard from "../components/Seller";
 import React from "react";
 
-type Props = {};
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
-function Seller({}: Props) {
+function Seller({ isUserLoggedIn }: Props) {
   return <SellerDashboard />;
 }
 

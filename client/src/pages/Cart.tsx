@@ -1,9 +1,11 @@
 import UserCart from "../components/Cart";
 
-type Props = {};
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
-function Cart({}: Props) {
-  return <UserCart />;
+function Cart({ isUserLoggedIn }: Props) {
+  return <UserCart isUserLoggedIn={isUserLoggedIn} />;
 }
 
 export default Cart;

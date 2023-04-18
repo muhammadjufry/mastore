@@ -18,9 +18,11 @@ import {
 } from "./index.styles";
 import MacbookImg from "../../assets/images/product-images/laptop.webp";
 import { IconEdit, IconTrash } from "@tabler/icons-react";
-type Props = {};
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
-function index({}: Props) {
+function index({ isUserLoggedIn }: Props) {
   return (
     <>
       <SellerPageHeader pageName="Seller Products" />

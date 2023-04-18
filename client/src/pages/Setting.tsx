@@ -1,11 +1,11 @@
-import AccountSetting from "../components/AccountSetting"
+import AccountSetting from "../components/AccountSetting";
 
-type Props = {}
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
-function Setting({}: Props) {
-  return (
-    <AccountSetting />
-  )
+function Setting({ isUserLoggedIn }: Props) {
+  return <AccountSetting />;
 }
 
-export default Setting
+export default Setting;

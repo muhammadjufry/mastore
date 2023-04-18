@@ -16,9 +16,11 @@ import {
 import BlankProfilePic from "../../assets/images/user-profile-images/empty-profile-picture.jpg";
 import { useState } from "react";
 
-type Props = {};
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
-function Index({}: Props) {
+function Index({ isUserLoggedIn }: Props) {
   const [value, setValue] = useState("");
   const searchListdata = value.trim().length > 0 ? ["laptop", "macbook"] : [];
   return (

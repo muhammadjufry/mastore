@@ -10,6 +10,8 @@ import ProductDetail from "./routes/product-detail";
 import UserDetail from "./routes/user-detail";
 import UserLogin from "./routes/user-login";
 import UserRegister from "./routes/user-register";
+import UserVerify from "./routes/verify-user";
+import UpdateUser from "./routes/edit-user";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
 import cors from "cors";
@@ -32,6 +34,8 @@ app.use("/api/v1", ProductDetail);
 app.use("/api/v1", UserDetail);
 app.use("/api/v1", UserLogin);
 app.use("/api/v1", UserRegister);
+app.use("/api/v1", UserVerify);
+app.use("/api/v1", UpdateUser);
 
 app.get("/api/v1/product/add-product-get", async (req, res) => {
   res.sendStatus(200).send("ok");

@@ -1,9 +1,11 @@
 import EditUserProfile from "../components/EditProfile";
 
-type Props = {};
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
-function EditProfile({}: Props) {
-  return <EditUserProfile />;
+function EditProfile({ isUserLoggedIn }: Props) {
+  return <EditUserProfile isUserLoggedIn={isUserLoggedIn} />;
 }
 
 export default EditProfile;

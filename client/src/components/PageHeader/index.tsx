@@ -13,9 +13,10 @@ import Header from "../HomePage/Header";
 type Props = {
   pageName?: string;
   withCartIcon: boolean;
+  isUserLoggedIn: boolean;
 };
 
-function Index({ pageName, withCartIcon }: Props) {
+function Index({ pageName, withCartIcon, isUserLoggedIn }: Props) {
   const navigate = useNavigate();
   return (
     <div className="header">
@@ -31,7 +32,7 @@ function Index({ pageName, withCartIcon }: Props) {
           </PageHeaderItemsIcon>
         ) : null}
       </PageItemsHeader>
-      <Header />
+      <Header isUserLoggedIn={isUserLoggedIn} />
     </div>
   );
 }

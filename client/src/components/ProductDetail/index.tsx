@@ -35,9 +35,11 @@ import {
 import { IconShoppingCartPlus } from "@tabler/icons-react";
 import PageHeader from "../PageHeader";
 import { Textarea } from "@mantine/core";
-type Props = {};
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
-function page({}: Props) {
+function page({ isUserLoggedIn }: Props) {
   const [value, setValue] = useState<number | "">(0);
   const handlers = useRef<NumberInputHandlers>();
   return (

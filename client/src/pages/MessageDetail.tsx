@@ -1,11 +1,11 @@
-import MessageChatDetail from "../components/MessageDetail"
+import MessageChatDetail from "../components/MessageDetail";
 
-type Props = {}
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
-function MessageDetail({}: Props) {
-  return (
-    <MessageChatDetail />
-  )
+function MessageDetail({ isUserLoggedIn }: Props) {
+  return <MessageChatDetail />;
 }
 
-export default MessageDetail
+export default MessageDetail;

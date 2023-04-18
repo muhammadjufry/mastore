@@ -1,12 +1,14 @@
 import SuccessfullyAfterCheckout from "../components/Checkout/SuccessfullyAfterCheckout";
 import ProductLists from "../components/HomePage/ProductLists";
 
-type Props = {};
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
-function AfterCheckout({}: Props) {
+function AfterCheckout({ isUserLoggedIn }: Props) {
   return (
     <>
-      <SuccessfullyAfterCheckout />
+      <SuccessfullyAfterCheckout isUserLoggedIn={isUserLoggedIn} />
       <ProductLists />
     </>
   );

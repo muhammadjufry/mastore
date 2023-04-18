@@ -37,6 +37,18 @@ router.post("/user/register", async (req, res) => {
       }
     });
 
+  await db("users")
+    .select("username")
+    .where("username", username)
+    .then((rows) => {
+      console.log(rows);
+      if (rows.length !== 0) {
+        return res
+          .status(401)
+          .send("User with provided username already registered!");
+      }
+    });
+
   const saltRounds = 10;
   const hashedPassword = await bcrypt.hash(password, saltRounds);
   console.log(password, hashedPassword);
@@ -61,7 +73,7 @@ router.post("/user/register", async (req, res) => {
   SendEmail({
     sendEmailTo: email,
     subject: `MASTORE | YOUR VERIFICATION CODE IS ${verficationCode}`,
-    message: `<h2>Thank you for registering at MA STORE</h2> <p>Here is your verification code to complete your registration: ${verficationCode}</p> <p>If this email is not you please ignore this email, Thank you</p> <p>Best wishes <br /> <b>MA STORE</b></p>`,
+    message: `<h2>Thank you for registering at MA STORE</h2> <p>Click this <a href="http://localhost:8080/api/v1/user/verify/${verficationCode}">link</a> to verify your email </p> <p>If this email is not you please ignore this email, Thank you</p> <p>Best wishes <br /> <b>MA STORE</b></p>`,
   });
   res.status(200).send({
     userTokenLogin: user["user-token-login"],

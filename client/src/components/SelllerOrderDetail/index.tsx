@@ -39,9 +39,11 @@ import {
   IconCreditCard,
 } from "@tabler/icons-react";
 
-type Props = {};
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
-function Index({}: Props) {
+function Index({ isUserLoggedIn }: Props) {
   return (
     <>
       <SellerPageHeader pageName="Order Detail" />

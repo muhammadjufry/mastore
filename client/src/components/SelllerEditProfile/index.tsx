@@ -11,9 +11,11 @@ import {
 import { IconUpload } from "@tabler/icons-react";
 import { EditSellerProfile, SellerPic } from "./index.styles";
 
-type Props = {};
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
-function index({}: Props) {
+function index({ isUserLoggedIn }: Props) {
   return (
     <>
       <SellerPageHeader pageName="Edit seller profile" />

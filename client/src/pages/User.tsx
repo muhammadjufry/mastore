@@ -1,12 +1,12 @@
-import React from 'react'
-import UserDashboard from '../components/User'
+import React from "react";
+import UserDashboard from "../components/User";
 
-type Props = {}
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
-function User({}: Props) {
-  return (
-    <UserDashboard />
-  )
+function User({ isUserLoggedIn }: Props) {
+  return <UserDashboard isUserLoggedIn={isUserLoggedIn} />;
 }
 
-export default User
+export default User;

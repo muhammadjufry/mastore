@@ -1,5 +1,5 @@
 import { useDisclosure } from "@mantine/hooks";
-import { IconSearch } from "@tabler/icons-react";
+import { IconSearch, IconLogin } from "@tabler/icons-react";
 import { Autocomplete } from "@mantine/core";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -18,9 +18,12 @@ import {
   FormSearch,
   Burger,
 } from "./header.styles";
-type Props = {};
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
-function Header({}: Props) {
+function Header({ isUserLoggedIn }: Props) {
+  console.log(isUserLoggedIn);
   const [value, setValue] = useState("");
   const [opened, { toggle }] = useDisclosure(false);
   const searchListdata = ["laptop", "macbook"];
@@ -59,12 +62,20 @@ function Header({}: Props) {
           </Center>
           <Right>
             <Icons>
-              <Link to="/user">
-                <AccountCircleIcon />
+              <Link
+                to={`/${isUserLoggedIn === false ? "login_or_signup" : "user"}`}
+              >
+                {isUserLoggedIn === false ? (
+                  <IconLogin />
+                ) : (
+                  <AccountCircleIcon />
+                )}
               </Link>
-              <Link to="/user/cart">
-                <ShoppingCartIcon />
-              </Link>
+              {isUserLoggedIn === true ? (
+                <Link to="/user/cart">
+                  <ShoppingCartIcon />
+                </Link>
+              ) : null}
             </Icons>
           </Right>
         </Row1>

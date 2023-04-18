@@ -32,6 +32,10 @@ import { forwardRef } from "react";
 import { Group, Avatar, Text, Select } from "@mantine/core";
 import { Link } from "react-router-dom";
 
+type Props = {
+  isUserLoggedIn: boolean;
+};
+
 const ShippingMethodOptions = [
   {
     image: JneImg,
@@ -109,10 +113,14 @@ const SelectItem = forwardRef<HTMLDivElement, ItemProps>(
   )
 );
 
-const Index = () => {
+const Index = ({ isUserLoggedIn }: Props) => {
   return (
     <div>
-      <PageHeader pageName="Checkout" withCartIcon={true} />
+      <PageHeader
+        pageName="Checkout"
+        withCartIcon={true}
+        isUserLoggedIn={isUserLoggedIn}
+      />
       <br />
       <div style={{ padding: "0 20px" }}>
         <div

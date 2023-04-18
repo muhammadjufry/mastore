@@ -14,12 +14,17 @@ import {
 } from "./index.styles";
 
 import PageHeader from "../PageHeader";
-type Props = {};
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
-function Index({}: Props) {
+function Index({ isUserLoggedIn }: Props) {
+  const { name, following, follower } = JSON.parse(
+    localStorage.getItem("userInfo")!
+  )[0];
   return (
     <>
-      <PageHeader withCartIcon={false} />
+      <PageHeader withCartIcon={false} isUserLoggedIn={isUserLoggedIn} />
       <div style={{ padding: "0 20px" }}>
         <div className="container">
           <UserDashboardHeader>
@@ -31,8 +36,10 @@ function Index({}: Props) {
                   className="userProfileImg"
                 />
                 <UserProfileInfo>
-                  <h4 className="userProfileName">Profile name</h4>
-                  <span>5 Followers | 5 Following</span>
+                  <h4 className="userProfileName">{name}</h4>
+                  <span>
+                    {follower} Followers | {following} Following
+                  </span>
                 </UserProfileInfo>
               </div>
               <ModeEditIcon />

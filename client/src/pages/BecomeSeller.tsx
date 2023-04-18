@@ -1,8 +1,10 @@
 import BecomeSellerDashboard from "../components/BecomeSeller/";
 
-type Props = {};
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
-function BecomeSeller({}: Props) {
+function BecomeSeller({ isUserLoggedIn }: Props) {
   return <BecomeSellerDashboard />;
 }
 

@@ -1,9 +1,11 @@
 import UserCheckout from "../components/Checkout";
 
-type Props = {};
+type Props = {
+  isUserLoggedIn: boolean;
+};
 
-function Checkout({}: Props) {
-  return <UserCheckout />;
+function Checkout({ isUserLoggedIn }: Props) {
+  return <UserCheckout isUserLoggedIn={isUserLoggedIn} />;
 }
 
 export default Checkout;
