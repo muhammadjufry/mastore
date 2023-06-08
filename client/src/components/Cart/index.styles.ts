@@ -1,15 +1,15 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const Cart = styled.div`
   height: 100vh;
   justify-content: space-between;
-`;
+`
 
 const RowOne = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-`;
+`
 
 const CartHeader = styled.div`
   display: flex;
@@ -26,7 +26,7 @@ const CartHeader = styled.div`
     font-size: 17px;
     font-weight: 600;
   }
-`;
+`
 
 const CartIcon = styled.div`
   display: flex;
@@ -35,7 +35,7 @@ const CartIcon = styled.div`
   background-color: white;
   padding: 7px;
   border-radius: 5px;
-`;
+`
 
 const CartItemsAmount = styled.span`
   display: flex;
@@ -49,7 +49,7 @@ const CartItemsAmount = styled.span`
   color: white;
   padding: 1px 3px;
   border-radius: 6px;
-`;
+`
 
 const CartItems = styled.ul`
   display: flex;
@@ -64,7 +64,7 @@ const CartItems = styled.ul`
     padding: 15px;
     height: 100px;
   }
-`;
+`
 
 const CartItemLeftSection = styled.div`
   height: 100%;
@@ -76,27 +76,27 @@ const CartItemLeftSection = styled.div`
     max-width: 80px;
     background-color: white;
   }
-`;
+`
 
 const CartItemCenterSection = styled.div`
   display: flex;
   flex-direction: column;
   gap: 5px;
   font-size: 15px;
-`;
+`
 
 const CartItemTitle = styled.div`
   font-weight: bold;
-`;
+`
 
 const CartItemVariants = styled.div`
   color: grey;
   font-size: 13.5px;
-`;
+`
 
 const IemLength = styled.div`
   font-weight: bold;
-`;
+`
 
 const CartItemRightSection = styled.div`
   display: flex;
@@ -110,13 +110,13 @@ const CartItemRightSection = styled.div`
     height: 20px;
     fill: black;
   }
-`;
+`
 
 const RowTwo = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-`;
+`
 
 const CartItemsTotal = styled.div`
   display: flex;
@@ -132,18 +132,18 @@ const CartItemsTotal = styled.div`
     font-size: 14px;
     font-weight: 500;
   }
-`;
+`
 
 const CartItemPrice = styled.div`
   font-weight: 600;
   font-size: 15px;
-`;
+`
 
 const CartItemsTotalRightSection = styled.div`
   display: flex;
   align-items: center;
   gap: 5px;
-`;
+`
 
 const CartBuyNowBtn = styled.div`
   width: 100%;
@@ -164,7 +164,7 @@ const CartBuyNowBtn = styled.div`
     margin-left: auto;
     padding: 10px 15px;
   }
-`;
+`
 
 export {
   Cart,
@@ -183,5 +183,5 @@ export {
   CartItemsTotal,
   CartItemPrice,
   CartItemsTotalRightSection,
-  CartBuyNowBtn,
-};
+  CartBuyNowBtn
+}

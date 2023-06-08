@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const EditProduct = styled.form`
   display: flex;
@@ -19,4 +19,4 @@ export const EditProduct = styled.form`
   ul {
     list-style: unset;
   }
-`;
+`

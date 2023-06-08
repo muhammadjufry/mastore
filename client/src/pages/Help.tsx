@@ -1,11 +1,11 @@
-import HelpDashboard from "../components/Help";
+import HelpDashboard from '../components/Help'
 
-type Props = {
-  isUserLoggedIn: boolean;
-};
-
-function Help({ isUserLoggedIn }: Props) {
-  return <HelpDashboard />;
+interface Props {
+  isUserLoggedIn: boolean
 }
 
-export default Help;
+function Help ({ isUserLoggedIn }: Props) {
+  return <HelpDashboard />
+}
+
+export default Help

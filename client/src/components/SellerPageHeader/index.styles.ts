@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { IconChevronLeft } from "@tabler/icons-react";
+import styled from 'styled-components'
+import { IconChevronLeft } from '@tabler/icons-react'
 
 export const SellerPageHeader = styled.div`
   display: flex;
@@ -10,8 +10,8 @@ export const SellerPageHeader = styled.div`
   span {
     font-weight: 600;
   }
-`;
+`
 
 export const SellerPageHeaderIcon = styled(IconChevronLeft)`
   cursor: pointer;
-`;
+`

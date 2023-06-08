@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const PeopleQuestionDetail = styled.div`
   display: flex;
@@ -9,7 +9,7 @@ export const PeopleQuestionDetail = styled.div`
     font-size: 16px;
     text-shadow: 0 5px 5px rgb(0, 0, 0, 0.1);
   }
-`;
+`
 
 export const HelpAnswer = styled.div`
   display: flex;
@@ -28,4 +28,4 @@ export const HelpAnswer = styled.div`
     font-size: 11.5px;
     line-height: 28px;
   }
-`;
+`

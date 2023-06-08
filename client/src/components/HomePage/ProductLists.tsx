@@ -1,4 +1,4 @@
-import LocationOnIcon from "@mui/icons-material/LocationOn";
+import LocationOnIcon from '@mui/icons-material/LocationOn'
 import {
   ProductForUser,
   ProductForUserList,
@@ -11,12 +11,12 @@ import {
   ProductStar,
   LocationInfo,
   ProductStarIcon as StarIcon,
-  ProductSold,
-} from "./productLists.styles";
-import MacbookImg from "../../assets/images/product-images/laptop.webp";
-type Props = {};
+  ProductSold
+} from './productLists.styles'
+import MacbookImg from '../../assets/images/product-images/laptop.webp'
+interface Props {}
 
-function ProductLists({}: Props) {
+function ProductLists ({}: Props) {
   return (
     <ProductForUser>
       <div className="container">
@@ -316,7 +316,7 @@ function ProductLists({}: Props) {
         </ProductForUserList>
       </div>
     </ProductForUser>
-  );
+  )
 }
 
-export default ProductLists;
+export default ProductLists

@@ -1,23 +1,23 @@
-import { useToggle, upperFirst } from "@mantine/hooks";
-import { useForm } from "@mantine/form";
+import { useToggle, upperFirst } from '@mantine/hooks'
+import { useForm } from '@mantine/form'
 import {
   TextInput,
   PasswordInput,
   Text,
   Paper,
   Group,
-  PaperProps,
+  type PaperProps,
   Divider,
   Checkbox,
   Anchor,
-  Button,
-} from "@mantine/core";
-import axios from "axios";
-import { useState } from "react";
-import { Stack, FormLinks } from "./index.styles";
-import { useNavigate } from "react-router-dom";
+  Button
+} from '@mantine/core'
+import axios from 'axios'
+import { useState } from 'react'
+import { Stack, FormLinks } from './index.styles'
+import { useNavigate } from 'react-router-dom'
 
-export function GoogleIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+export function GoogleIcon (props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -44,29 +44,29 @@ export function GoogleIcon(props: React.ComponentPropsWithoutRef<"svg">) {
         d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251"
       />
     </svg>
-  );
+  )
 }
 
-export default function Index(props: PaperProps) {
-  const navigate = useNavigate();
-  const [type, toggle] = useToggle(["login", "register"]);
-  const [errorMessage, setErrorMessage] = useState("");
+export default function Index (props: PaperProps) {
+  const navigate = useNavigate()
+  const [type, toggle] = useToggle(['login', 'register'])
+  const [errorMessage, setErrorMessage] = useState('')
   const form = useForm({
     initialValues: {
-      email: "",
-      username: "",
-      name: "",
-      password: "",
-      confirmPassword: "",
-      phoneNumber: "",
-      address: "",
-      terms: true,
-    },
-  });
+      email: '',
+      username: '',
+      name: '',
+      password: '',
+      confirmPassword: '',
+      phoneNumber: '',
+      address: '',
+      terms: true
+    }
+  })
 
   const register_user = async () => {
     try {
-      const url = "http://localhost:8080/api/v1/user/register";
+      const url = 'http://localhost:8080/api/v1/user/register'
       const body = {
         name: form.values.name,
         username: form.values.username,
@@ -77,40 +77,40 @@ export default function Index(props: PaperProps) {
         orderId: `${form.values.username}OrderId`,
         phoneNumber: form.values.phoneNumber,
         address: form.values.address,
-        following: "0",
-        follower: "0",
-      };
-      console.log(url, body);
-      const postRequest = await axios.post(url, body);
-      alert("A verfication link sent to your email please verify it!");
-      console.log(postRequest);
-      navigate("/", {
-        replace: true,
-      });
+        following: '0',
+        follower: '0'
+      }
+      console.log(url, body)
+      const postRequest = await axios.post(url, body)
+      alert('A verfication link sent to your email please verify it!')
+      console.log(postRequest)
+      navigate('/', {
+        replace: true
+      })
     } catch (error) {
-      console.log(error);
+      console.log(error)
     }
-  };
+  }
 
   const login_user = async () => {
     try {
-      const url = "http://localhost:8080/api/v1/user/login";
+      const url = 'http://localhost:8080/api/v1/user/login'
       const body = {
         email: form.values.email,
         password: form.values.password,
-        confirmPassword: form.values.confirmPassword,
-      };
-      console.log(url, body);
-      const postRequest = await axios.post(url, body);
-      localStorage.setItem("user-token-login", postRequest.data.userTokenLogin);
-      console.log(postRequest);
-      navigate("/", {
-        replace: true,
-      });
+        confirmPassword: form.values.confirmPassword
+      }
+      console.log(url, body)
+      const postRequest = await axios.post(url, body)
+      localStorage.setItem('user-token-login', postRequest.data.userTokenLogin)
+      console.log(postRequest)
+      navigate('/', {
+        replace: true
+      })
     } catch (error) {
-      console.log(error);
+      console.log(error)
     }
-  };
+  }
 
   return (
     <Paper radius="md" p="xs" {...props}>
@@ -118,9 +118,9 @@ export default function Index(props: PaperProps) {
         size="lg"
         weight={500}
         style={{
-          textAlign: "center",
-          fontFamily: "Poppins, sans-serif",
-          fontWeight: "600",
+          textAlign: 'center',
+          fontFamily: 'Poppins, sans-serif',
+          fontWeight: '600'
         }}
       >
         MA-STORE - {upperFirst(type)}
@@ -133,12 +133,12 @@ export default function Index(props: PaperProps) {
           color="gray"
           styles={() => ({
             root: {
-              width: "300px",
-            },
+              width: '300px'
+            }
           })}
           radius="md"
         >
-          {type === "register" ? "Sign Up with Google" : "Sign In with Google"}
+          {type === 'register' ? 'Sign Up with Google' : 'Sign In with Google'}
         </Button>
       </Group>
 
@@ -146,14 +146,13 @@ export default function Index(props: PaperProps) {
 
       <form onSubmit={form.onSubmit(() => {})}>
         <Stack>
-          {type === "register" && (
+          {type === 'register' && (
             <>
               <TextInput
                 label="Name"
                 placeholder="Your name"
                 value={form.values.name}
-                onChange={(event) =>
-                  form.setFieldValue("name", event.currentTarget.value)
+                onChange={(event) => { form.setFieldValue('name', event.currentTarget.value) }
                 }
                 radius="md"
                 size="xs"
@@ -162,8 +161,7 @@ export default function Index(props: PaperProps) {
                 label="Username"
                 placeholder="your-name-332"
                 value={form.values.username}
-                onChange={(event) =>
-                  form.setFieldValue("username", event.currentTarget.value)
+                onChange={(event) => { form.setFieldValue('username', event.currentTarget.value) }
                 }
                 radius="md"
                 size="xs"
@@ -176,22 +174,20 @@ export default function Index(props: PaperProps) {
             label="Email"
             placeholder="hello@mantine.dev"
             value={form.values.email}
-            onChange={(event) =>
-              form.setFieldValue("email", event.currentTarget.value)
+            onChange={(event) => { form.setFieldValue('email', event.currentTarget.value) }
             }
-            error={form.errors.email && "Invalid email"}
+            error={form.errors.email && 'Invalid email'}
             radius="md"
             size="xs"
           />
 
-          {type === "register" && (
+          {type === 'register' && (
             <>
               <TextInput
                 label="Phone number"
                 placeholder="000 XXX XXXX"
                 value={form.values.phoneNumber}
-                onChange={(event) =>
-                  form.setFieldValue("phoneNumber", event.currentTarget.value)
+                onChange={(event) => { form.setFieldValue('phoneNumber', event.currentTarget.value) }
                 }
                 radius="md"
                 size="xs"
@@ -200,8 +196,7 @@ export default function Index(props: PaperProps) {
                 label="Address"
                 placeholder="Street 023 USA"
                 value={form.values.address}
-                onChange={(event) =>
-                  form.setFieldValue("address", event.currentTarget.value)
+                onChange={(event) => { form.setFieldValue('address', event.currentTarget.value) }
                 }
                 radius="md"
                 size="xs"
@@ -214,12 +209,11 @@ export default function Index(props: PaperProps) {
             label="Password"
             placeholder="Your password"
             value={form.values.password}
-            onChange={(event) =>
-              form.setFieldValue("password", event.currentTarget.value)
+            onChange={(event) => { form.setFieldValue('password', event.currentTarget.value) }
             }
             error={
               form.errors.password &&
-              "Password should include at least 6 characters"
+              'Password should include at least 6 characters'
             }
             radius="md"
             size="xs"
@@ -230,26 +224,24 @@ export default function Index(props: PaperProps) {
             label="Confirm Password"
             placeholder="Confirm Password"
             value={form.values.confirmPassword}
-            onChange={(event) =>
-              form.setFieldValue("confirmPassword", event.currentTarget.value)
+            onChange={(event) => { form.setFieldValue('confirmPassword', event.currentTarget.value) }
             }
             error={errorMessage}
             radius="md"
             size="xs"
           />
 
-          {type === "register" && (
+          {type === 'register' && (
             <Checkbox
               size="xs"
               label="I accept terms and conditions"
               checked={form.values.terms}
               styles={() => ({
                 root: {
-                  marginTop: "7px",
-                },
+                  marginTop: '7px'
+                }
               })}
-              onChange={(event) =>
-                form.setFieldValue("terms", event.currentTarget.checked)
+              onChange={(event) => { form.setFieldValue('terms', event.currentTarget.checked) }
               }
             />
           )}
@@ -261,48 +253,50 @@ export default function Index(props: PaperProps) {
               component="button"
               type="button"
               color="dimmed"
-              onClick={() => toggle()}
+              onClick={() => { toggle() }}
               size="xs"
             >
-              {type === "register"
-                ? "Already have an account? Login"
+              {type === 'register'
+                ? 'Already have an account? Login'
                 : "Don't have an account? Register"}
             </Anchor>
             <Anchor component="button" type="button" color="dimmed" size="xs">
-              {type === "login" ? "Forgot password? Recover your password" : ""}
+              {type === 'login' ? 'Forgot password? Recover your password' : ''}
             </Anchor>
           </FormLinks>
         </Group>
-        {type === "register" ? (
+        {type === 'register'
+          ? (
           <Button
             type="submit"
             radius="md"
             size="xs"
             styles={() => ({
               root: {
-                marginTop: "15px",
-              },
+                marginTop: '15px'
+              }
             })}
-            onClick={() => register_user()}
+            onClick={async () => { await register_user() }}
           >
             Register
           </Button>
-        ) : (
+            )
+          : (
           <Button
             type="submit"
             radius="md"
             size="xs"
             styles={() => ({
               root: {
-                marginTop: "15px",
-              },
+                marginTop: '15px'
+              }
             })}
-            onClick={() => login_user()}
+            onClick={async () => { await login_user() }}
           >
             Login
           </Button>
-        )}
+            )}
       </form>
     </Paper>
-  );
+  )
 }

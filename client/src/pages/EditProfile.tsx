@@ -1,11 +1,11 @@
-import EditUserProfile from "../components/EditProfile";
+import EditUserProfile from '../components/EditProfile'
 
-type Props = {
-  isUserLoggedIn: boolean;
-};
-
-function EditProfile({ isUserLoggedIn }: Props) {
-  return <EditUserProfile isUserLoggedIn={isUserLoggedIn} />;
+interface Props {
+  isUserLoggedIn: boolean
 }
 
-export default EditProfile;
+function EditProfile ({ isUserLoggedIn }: Props) {
+  return <EditUserProfile isUserLoggedIn={isUserLoggedIn} />
+}
+
+export default EditProfile

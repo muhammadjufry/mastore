@@ -1,43 +1,43 @@
-import { Input, PasswordInput, Button } from "@mantine/core";
-import PageHeader from "../PageHeader";
-import { UserProfile, UserProfileInfo, EditProfileInput } from "./index.styles";
-import BlankProfilePic from "../../assets/images/user-profile-images/empty-profile-picture.jpg";
-import { useState } from "react";
-import axios from "axios";
-type Props = {
-  isUserLoggedIn: boolean;
-};
+import { Input, PasswordInput, Button } from '@mantine/core'
+import PageHeader from '../PageHeader'
+import { UserProfile, UserProfileInfo, EditProfileInput } from './index.styles'
+import BlankProfilePic from '../../assets/images/user-profile-images/empty-profile-picture.jpg'
+import { useState } from 'react'
+import axios from 'axios'
+interface Props {
+  isUserLoggedIn: boolean
+}
 
-function Index({ isUserLoggedIn }: Props) {
+function Index ({ isUserLoggedIn }: Props) {
   const { name, username, email, address } = JSON.parse(
-    localStorage.getItem("userInfo")!
-  )[0];
-  const phoneNumber = JSON.parse(localStorage.getItem("userInfo")!)[0][
-    "phone-number"
-  ];
+    localStorage.getItem('userInfo')!
+  )[0]
+  const phoneNumber = JSON.parse(localStorage.getItem('userInfo')!)[0][
+    'phone-number'
+  ]
   const [form, setForm] = useState({
     name,
     username,
     email,
     address,
-    phoneNumber,
-  });
-  console.log(form);
+    phoneNumber
+  })
+  console.log(form)
 
   const onChange = (e: any) => {
-    setForm({ ...form, [e.name]: e.value });
-  };
+    setForm({ ...form, [e.name]: e.value })
+  }
 
   const updateUserProfile = async (e: any) => {
-    e.preventDefault();
+    e.preventDefault()
     try {
-      const url = `http://localhost:8080/api/v1/user/updateUser/${email}`;
-      const updateRequest = await axios.put(url, form);
-      console.log(updateRequest);
+      const url = `http://localhost:8080/api/v1/user/updateUser/${email}`
+      const updateRequest = await axios.put(url, form)
+      console.log(updateRequest)
     } catch (error) {
-      console.log(error);
+      console.log(error)
     }
-  };
+  }
 
   return (
     <>
@@ -46,10 +46,10 @@ function Index({ isUserLoggedIn }: Props) {
         withCartIcon={true}
         isUserLoggedIn={isUserLoggedIn}
       />
-      <div style={{ padding: "0 20px" }}>
+      <div style={{ padding: '0 20px' }}>
         <div
           className="container pageDefaultStyle"
-          style={{ padding: "20px 0" }}
+          style={{ padding: '20px 0' }}
         >
           <UserProfile>
             <img
@@ -68,7 +68,7 @@ function Index({ isUserLoggedIn }: Props) {
                 placeholder="Your Name"
                 name="name"
                 value={form.name}
-                onChange={(e) => onChange(e.target)}
+                onChange={(e) => { onChange(e.target) }}
               />
             </Input.Wrapper>
             <Input.Wrapper label="Username:">
@@ -76,7 +76,7 @@ function Index({ isUserLoggedIn }: Props) {
                 placeholder="Your Username"
                 name="username"
                 value={form.username}
-                onChange={(e) => onChange(e.target)}
+                onChange={(e) => { onChange(e.target) }}
               />
             </Input.Wrapper>
             <Input.Wrapper label="Address:">
@@ -84,7 +84,7 @@ function Index({ isUserLoggedIn }: Props) {
                 placeholder="You address"
                 name="address"
                 value={form.address}
-                onChange={(e) => onChange(e.target)}
+                onChange={(e) => { onChange(e.target) }}
               />
             </Input.Wrapper>
             <Input.Wrapper label="Phone number:">
@@ -92,7 +92,7 @@ function Index({ isUserLoggedIn }: Props) {
                 placeholder="000 XXXX XXX"
                 name="phoneNumber"
                 value={form.phoneNumber}
-                onChange={(e) => onChange(e.target)}
+                onChange={(e) => { onChange(e.target) }}
               />
             </Input.Wrapper>
             <Input.Wrapper label="Email:">
@@ -102,19 +102,19 @@ function Index({ isUserLoggedIn }: Props) {
                 value={form.email}
                 styles={() => ({
                   input: {
-                    "&": {
-                      backgroundColor: "rgb(240, 240, 240)",
-                      border: "1px solid rgb(240, 240, 240) !important",
-                    },
-                  },
+                    '&': {
+                      backgroundColor: 'rgb(240, 240, 240)',
+                      border: '1px solid rgb(240, 240, 240) !important'
+                    }
+                  }
                 })}
               />
             </Input.Wrapper>
             <Button
               styles={(theme) => ({
                 root: {
-                  width: "fit-content",
-                },
+                  width: 'fit-content'
+                }
               })}
               color="dark"
               radius="sm"
@@ -126,7 +126,7 @@ function Index({ isUserLoggedIn }: Props) {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default Index;
+export default Index

@@ -1,11 +1,11 @@
-import OrderListItems from "../components/Order";
+import OrderListItems from '../components/Order'
 
-type Props = {
-  isUserLoggedIn: boolean;
-};
-
-function Order({ isUserLoggedIn }: Props) {
-  return <OrderListItems />;
+interface Props {
+  isUserLoggedIn: boolean
 }
 
-export default Order;
+function Order ({ isUserLoggedIn }: Props) {
+  return <OrderListItems />
+}
+
+export default Order

@@ -1,7 +1,7 @@
-import PageHeader from "../PageHeader";
-import { Link } from "react-router-dom";
-import { Autocomplete, Text } from "@mantine/core";
-import { IconSearch } from "@tabler/icons-react";
+import PageHeader from '../PageHeader'
+import { Link } from 'react-router-dom'
+import { Autocomplete, Text } from '@mantine/core'
+import { IconSearch } from '@tabler/icons-react'
 import {
   Chat,
   ChatMessage,
@@ -11,35 +11,35 @@ import {
   ChatMessageHeader,
   ChatMessageStatus,
   ChatProfileName,
-  ChatProfileDescription,
-} from "./index.styles";
-import BlankProfilePic from "../../assets/images/user-profile-images/empty-profile-picture.jpg";
-import { useState } from "react";
+  ChatProfileDescription
+} from './index.styles'
+import BlankProfilePic from '../../assets/images/user-profile-images/empty-profile-picture.jpg'
+import { useState } from 'react'
 
-type Props = {};
+interface Props {}
 
-function Index({}: Props) {
-  const [value, setValue] = useState("");
-  const searchListdata = value.trim().length > 0 ? ["laptop", "macbook"] : [];
+function Index ({}: Props) {
+  const [value, setValue] = useState('')
+  const searchListdata = value.trim().length > 0 ? ['laptop', 'macbook'] : []
   return (
     <Chat>
       <PageHeader pageName="Chat Message" withCartIcon={true} />
-      <div style={{ padding: "0 20px" }}>
+      <div style={{ padding: '0 20px' }}>
         <div
           className="container pageDefaultStyle"
-          style={{ padding: "20px 0" }}
+          style={{ padding: '20px 0' }}
         >
           <Autocomplete
             styles={() => ({
               input: {
-                padding: "16px",
-                paddingLeft: "35px !important",
-              },
+                padding: '16px',
+                paddingLeft: '35px !important'
+              }
             })}
             value={value}
             size="xs"
             radius="lg"
-            icon={<IconSearch size="1rem" style={{ marginLeft: "10px" }} />}
+            icon={<IconSearch size="1rem" style={{ marginLeft: '10px' }} />}
             onChange={setValue}
             placeholder="Search message..."
             data={searchListdata}
@@ -120,7 +120,7 @@ function Index({}: Props) {
         </div>
       </div>
     </Chat>
-  );
+  )
 }
 
-export default Index;
+export default Index

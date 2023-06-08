@@ -1,4 +1,4 @@
-import Header from "../HomePage/Header";
+import Header from '../HomePage/Header'
 import {
   ProductDetail,
   ProductInfo,
@@ -17,33 +17,33 @@ import {
   ProductReviewRate,
   ProductReviewMessages,
   ProductDetailHeader,
-  ProductAddReview,
-} from "./index.styles";
-import Macbook from "../../assets/images/product-images/macbook.jpg";
-import { useState, useRef } from "react";
+  ProductAddReview
+} from './index.styles'
+import Macbook from '../../assets/images/product-images/macbook.jpg'
+import { useState, useRef } from 'react'
 import {
   NumberInput,
   Group,
   ActionIcon,
-  NumberInputHandlers,
+  type NumberInputHandlers,
   rem,
   Rating,
   Button,
   Indicator,
-  Avatar,
-} from "@mantine/core";
-import { IconShoppingCartPlus } from "@tabler/icons-react";
-import PageHeader from "../PageHeader";
-import { Textarea } from "@mantine/core";
-type Props = {
-  isUserLoggedIn: boolean;
-};
+  Avatar
+} from '@mantine/core'
+import { IconShoppingCartPlus } from '@tabler/icons-react'
+import PageHeader from '../PageHeader'
+import { Textarea } from '@mantine/core'
+interface Props {
+  isUserLoggedIn: boolean
+}
 
-function page({ isUserLoggedIn }: Props) {
-  const [value, setValue] = useState<number | "">(0);
-  const handlers = useRef<NumberInputHandlers>();
+function page ({ isUserLoggedIn }: Props) {
+  const [value, setValue] = useState<number | ''>(0)
+  const handlers = useRef<NumberInputHandlers>()
   return (
-    <div style={{ backgroundColor: "rgb(250, 250, 250)" }}>
+    <div style={{ backgroundColor: 'rgb(250, 250, 250)' }}>
       <PageHeader pageName="Product Detail" withCartIcon={true} />
       <div className="container">
         <ProductDetail>
@@ -91,12 +91,12 @@ function page({ isUserLoggedIn }: Props) {
                 <NumberInput
                   hideControls
                   value={value}
-                  onChange={(val) => setValue(val)}
+                  onChange={(val) => { setValue(val) }}
                   handlersRef={handlers}
                   max={10}
                   min={0}
                   step={1}
-                  styles={{ input: { width: rem(54), textAlign: "center" } }}
+                  styles={{ input: { width: rem(54), textAlign: 'center' } }}
                 />
                 <ActionIcon
                   size={42}
@@ -113,8 +113,8 @@ function page({ isUserLoggedIn }: Props) {
               color="dark"
               styles={() => ({
                 root: {
-                  width: "fit-content",
-                },
+                  width: 'fit-content'
+                }
               })}
             >
               Add to cart
@@ -170,8 +170,8 @@ function page({ isUserLoggedIn }: Props) {
             <ProductReviewRating>
               <svg
                 viewBox="0 0 24 24"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 className="mantine-1iabz2j mantine-Rating-icon"
@@ -184,66 +184,66 @@ function page({ isUserLoggedIn }: Props) {
               <li>
                 <svg
                   viewBox="0 0 24 24"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   className="mantine-1iabz2j mantine-Rating-icon"
                 >
                   <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
-                </svg>{" "}
+                </svg>{' '}
                 5 (1340)
               </li>
               <li>
                 <svg
                   viewBox="0 0 24 24"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   className="mantine-1iabz2j mantine-Rating-icon"
                 >
                   <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
-                </svg>{" "}
+                </svg>{' '}
                 4 (700)
               </li>
               <li>
                 <svg
                   viewBox="0 0 24 24"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   className="mantine-1iabz2j mantine-Rating-icon"
                 >
                   <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
-                </svg>{" "}
+                </svg>{' '}
                 3 (200)
               </li>
               <li>
                 <svg
                   viewBox="0 0 24 24"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   className="mantine-1iabz2j mantine-Rating-icon"
                 >
                   <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
-                </svg>{" "}
+                </svg>{' '}
                 2 (50)
               </li>
               <li>
                 <svg
                   viewBox="0 0 24 24"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   className="mantine-1iabz2j mantine-Rating-icon"
                 >
                   <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
-                </svg>{" "}
+                </svg>{' '}
                 1 (13)
               </li>
             </ProductReviewRate>
@@ -262,8 +262,8 @@ function page({ isUserLoggedIn }: Props) {
             <Button
               styles={() => ({
                 root: {
-                  width: "fit-content",
-                },
+                  width: 'fit-content'
+                }
               })}
             >
               Send
@@ -308,7 +308,7 @@ function page({ isUserLoggedIn }: Props) {
         </ProductReview>
       </div>
     </div>
-  );
+  )
 }
 
-export default page;
+export default page

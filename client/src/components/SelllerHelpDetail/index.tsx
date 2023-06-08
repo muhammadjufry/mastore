@@ -1,11 +1,11 @@
-import { PeopleQuestionDetail, HelpAnswer } from "./index.styles";
-import SellerPageHeader from "../SellerPageHeader";
-import { Avatar } from "@mantine/core";
-type Props = {
-  isUserLoggedIn: boolean;
-};
+import { PeopleQuestionDetail, HelpAnswer } from './index.styles'
+import SellerPageHeader from '../SellerPageHeader'
+import { Avatar } from '@mantine/core'
+interface Props {
+  isUserLoggedIn: boolean
+}
 
-function Index({ isUserLoggedIn }: Props) {
+function Index ({ isUserLoggedIn }: Props) {
   return (
     <>
       <SellerPageHeader pageName="User question" />
@@ -29,7 +29,7 @@ function Index({ isUserLoggedIn }: Props) {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default Index;
+export default Index

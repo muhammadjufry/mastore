@@ -1,5 +1,5 @@
-import SellerPageHeader from "../SellerPageHeader";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
+import SellerPageHeader from '../SellerPageHeader'
+import LocationOnIcon from '@mui/icons-material/LocationOn'
 import {
   OrderDetail,
   OrderDetailItem,
@@ -27,23 +27,23 @@ import {
   OrderItemTotalSpan,
   OrderItemTotalPrice,
   OrderItemTotalRight,
-  OrderBuyNowButton,
-} from "./index.styles";
+  OrderBuyNowButton
+} from './index.styles'
 
-import LaptopImg from "../../assets/images/product-images/laptop.webp";
+import LaptopImg from '../../assets/images/product-images/laptop.webp'
 
-import { Timeline, Text } from "@mantine/core";
+import { Timeline, Text } from '@mantine/core'
 import {
   IconMapPin,
   IconPackageImport,
-  IconCreditCard,
-} from "@tabler/icons-react";
+  IconCreditCard
+} from '@tabler/icons-react'
 
-type Props = {
-  isUserLoggedIn: boolean;
-};
+interface Props {
+  isUserLoggedIn: boolean
+}
 
-function Index({ isUserLoggedIn }: Props) {
+function Index ({ isUserLoggedIn }: Props) {
   return (
     <>
       <SellerPageHeader pageName="Order Detail" />
@@ -116,7 +116,7 @@ function Index({ isUserLoggedIn }: Props) {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default Index;
+export default Index

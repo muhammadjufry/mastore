@@ -1,8 +1,8 @@
-import ArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
-import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
-import RemoveCircleIcon from "@mui/icons-material/RemoveCircle";
-import AddCircleIcon from "@mui/icons-material/AddCircle";
-import LaptopImg from "../../assets/images/product-images/laptop.webp";
+import ArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag'
+import RemoveCircleIcon from '@mui/icons-material/RemoveCircle'
+import AddCircleIcon from '@mui/icons-material/AddCircle'
+import LaptopImg from '../../assets/images/product-images/laptop.webp'
 import {
   Cart,
   RowOne,
@@ -20,14 +20,14 @@ import {
   IemLength,
   CartItemPrice,
   CartItemsTotalRightSection,
-  CartBuyNowBtn,
-} from "./index.styles";
-import PageHeader from "../PageHeader";
-import { Link } from "react-router-dom";
+  CartBuyNowBtn
+} from './index.styles'
+import PageHeader from '../PageHeader'
+import { Link } from 'react-router-dom'
 
-type Props = {
-  isUserLoggedIn: boolean;
-};
+interface Props {
+  isUserLoggedIn: boolean
+}
 
 const Index = ({ isUserLoggedIn }: Props) => {
   return (
@@ -38,7 +38,7 @@ const Index = ({ isUserLoggedIn }: Props) => {
         isUserLoggedIn={isUserLoggedIn}
       />
       <br />
-      <div style={{ padding: "0 20px" }}>
+      <div style={{ padding: '0 20px' }}>
         <div className="container">
           <RowOne>
             <CartItems>
@@ -114,7 +114,7 @@ const Index = ({ isUserLoggedIn }: Props) => {
         </div>
       </div>
     </Cart>
-  );
-};
+  )
+}
 
-export default Index;
+export default Index

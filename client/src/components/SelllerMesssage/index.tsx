@@ -1,7 +1,7 @@
-import SellerPageHeader from "../SellerPageHeader";
-import { Link } from "react-router-dom";
-import { Autocomplete, Text } from "@mantine/core";
-import { IconSearch } from "@tabler/icons-react";
+import SellerPageHeader from '../SellerPageHeader'
+import { Link } from 'react-router-dom'
+import { Autocomplete, Text } from '@mantine/core'
+import { IconSearch } from '@tabler/icons-react'
 import {
   Chat,
   ChatMessage,
@@ -11,18 +11,18 @@ import {
   ChatMessageHeader,
   ChatMessageStatus,
   ChatProfileName,
-  ChatProfileDescription,
-} from "./index.styles";
-import BlankProfilePic from "../../assets/images/user-profile-images/empty-profile-picture.jpg";
-import { useState } from "react";
+  ChatProfileDescription
+} from './index.styles'
+import BlankProfilePic from '../../assets/images/user-profile-images/empty-profile-picture.jpg'
+import { useState } from 'react'
 
-type Props = {
-  isUserLoggedIn: boolean;
-};
+interface Props {
+  isUserLoggedIn: boolean
+}
 
-function Index({ isUserLoggedIn }: Props) {
-  const [value, setValue] = useState("");
-  const searchListdata = value.trim().length > 0 ? ["laptop", "macbook"] : [];
+function Index ({ isUserLoggedIn }: Props) {
+  const [value, setValue] = useState('')
+  const searchListdata = value.trim().length > 0 ? ['laptop', 'macbook'] : []
   return (
     <>
       <SellerPageHeader pageName="Chat Message" />'
@@ -31,14 +31,14 @@ function Index({ isUserLoggedIn }: Props) {
           <Autocomplete
             styles={() => ({
               input: {
-                padding: "16px",
-                paddingLeft: "35px !important",
-              },
+                padding: '16px',
+                paddingLeft: '35px !important'
+              }
             })}
             value={value}
             size="xs"
             radius="lg"
-            icon={<IconSearch size="1rem" style={{ marginLeft: "10px" }} />}
+            icon={<IconSearch size="1rem" style={{ marginLeft: '10px' }} />}
             onChange={setValue}
             placeholder="Search message..."
             data={searchListdata}
@@ -121,7 +121,7 @@ function Index({ isUserLoggedIn }: Props) {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default Index;
+export default Index

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const SellerSettingLists = styled.ul`
   display: flex;
@@ -10,4 +10,4 @@ export const SellerSettingLists = styled.ul`
     font-size: 12px;
     cursor: pointer;
   }
-`;
+`

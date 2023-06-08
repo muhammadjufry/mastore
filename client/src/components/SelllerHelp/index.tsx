@@ -1,21 +1,21 @@
-import { SellerHelpBody, PeopleQuestions } from "./index.styles";
-import SellerPageHeader from "../SellerPageHeader";
-import { Text, Input } from "@mantine/core";
-import { SpotlightProvider, spotlight } from "@mantine/spotlight";
-import type { SpotlightAction } from "@mantine/spotlight";
+import { SellerHelpBody, PeopleQuestions } from './index.styles'
+import SellerPageHeader from '../SellerPageHeader'
+import { Text, Input } from '@mantine/core'
+import { SpotlightProvider, spotlight } from '@mantine/spotlight'
+import type { SpotlightAction } from '@mantine/spotlight'
 import {
   IconHome,
   IconDashboard,
   IconFileText,
-  IconSearch,
-} from "@tabler/icons-react";
-import { Link } from "react-router-dom";
+  IconSearch
+} from '@tabler/icons-react'
+import { Link } from 'react-router-dom'
 
-type Props = {
-  isUserLoggedIn: boolean;
-};
+interface Props {
+  isUserLoggedIn: boolean
+}
 
-function Help({ isUserLoggedIn }: Props) {
+function Help ({ isUserLoggedIn }: Props) {
   return (
     <>
       <SellerPageHeader pageName="Help" />
@@ -31,8 +31,8 @@ function Help({ isUserLoggedIn }: Props) {
               icon={<IconSearch size={15} />}
               styles={() => ({
                 input: {
-                  border: "0.0625rem solid #ced4da !important",
-                },
+                  border: '0.0625rem solid #ced4da !important'
+                }
               })}
             />
             <Text fw={600}>Some's people ask:</Text>
@@ -54,31 +54,31 @@ function Help({ isUserLoggedIn }: Props) {
         </div>
       </div>
     </>
-  );
+  )
 }
 
 const actions: SpotlightAction[] = [
   {
-    title: "Home",
-    description: "Get to home page",
-    onTrigger: () => console.log("Home"),
-    icon: <IconHome size="1.2rem" />,
+    title: 'Home',
+    description: 'Get to home page',
+    onTrigger: () => { console.log('Home') },
+    icon: <IconHome size="1.2rem" />
   },
   {
-    title: "Dashboard",
-    description: "Get full information about current system status",
-    onTrigger: () => console.log("Dashboard"),
-    icon: <IconDashboard size="1.2rem" />,
+    title: 'Dashboard',
+    description: 'Get full information about current system status',
+    onTrigger: () => { console.log('Dashboard') },
+    icon: <IconDashboard size="1.2rem" />
   },
   {
-    title: "Documentation",
-    description: "Visit documentation to lean more about all features",
-    onTrigger: () => console.log("Documentation"),
-    icon: <IconFileText size="1.2rem" />,
-  },
-];
+    title: 'Documentation',
+    description: 'Visit documentation to lean more about all features',
+    onTrigger: () => { console.log('Documentation') },
+    icon: <IconFileText size="1.2rem" />
+  }
+]
 
-function index({ isUserLoggedIn }: Props) {
+function index ({ isUserLoggedIn }: Props) {
   return (
     <SpotlightProvider
       actions={actions}
@@ -89,7 +89,7 @@ function index({ isUserLoggedIn }: Props) {
     >
       <Help isUserLoggedIn={isUserLoggedIn} />
     </SpotlightProvider>
-  );
+  )
 }
 
-export default index;
+export default index

@@ -1,11 +1,11 @@
-import { Carousel } from "@mantine/carousel";
-import BannerImgOne from "../../assets/images/banner-images/banner-image-1.png";
-import BannerImgTwo from "../../assets/images/banner-images/banner-image-2.png";
-import BannerImgThree from "../../assets/images/banner-images/banner-image-3.png";
-import { createStyles, getStylesRef } from "@mantine/core";
+import { Carousel } from '@mantine/carousel'
+import BannerImgOne from '../../assets/images/banner-images/banner-image-1.png'
+import BannerImgTwo from '../../assets/images/banner-images/banner-image-2.png'
+import BannerImgThree from '../../assets/images/banner-images/banner-image-3.png'
+import { createStyles, getStylesRef } from '@mantine/core'
 
-type Props = {};
-function Hero({}: Props) {
+interface Props {}
+function Hero ({}: Props) {
   return (
     <section>
       <div className="container">
@@ -22,7 +22,7 @@ function Hero({}: Props) {
         </Carousel>
       </div>
     </section>
-  );
+  )
 }
 
-export default Hero;
+export default Hero

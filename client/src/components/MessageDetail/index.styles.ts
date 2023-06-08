@@ -1,27 +1,27 @@
-import styled from "styled-components";
-import ArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
+import styled from 'styled-components'
+import ArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
 export const MessageDetailItemsHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-`;
+`
 export const MessageDetailItemsHeaderSvg = styled(ArrowLeftIcon)`
   cursor: pointer;
   width: 25px;
   height: 25px;
   fill: black;
-`;
+`
 export const MessageDetailItemsHeaderText = styled.div`
   font-size: 17px;
   font-weight: 600;
-`;
+`
 
 export const ChatMessageDetail = styled.div`
   display: flex;
   flex-direction: column;
   padding: 20px 20px 0;
-`;
+`
 
 export const UserProfile = styled.div`
   display: flex;
@@ -30,14 +30,14 @@ export const UserProfile = styled.div`
   padding: 13px;
   border: 1px solid grey;
   gap: 13px;
-`;
+`
 
 export const UserProfileImage = styled.img`
   width: 55px;
   height: 55px;
   border-radius: 50%;
   object-fit: contain;
-`;
+`
 
 export const UserProfileInfo = styled.div`
   display: flex;
@@ -47,14 +47,14 @@ export const UserProfileInfo = styled.div`
   & span {
     font-size: 12px;
   }
-`;
+`
 
 export const ChatMessageBox = styled.div`
   border-top: none;
   max-height: 100%;
 
   position: relative;
-`;
+`
 
 export const MessageChatLists = styled.ul`
   display: flex;
@@ -79,7 +79,7 @@ export const MessageChatLists = styled.ul`
   li.user {
     flex-direction: row-reverse;
   }
-`;
+`
 
 export const ChatMessageInfo = styled.div`
   display: flex;
@@ -94,7 +94,7 @@ export const ChatMessageInfo = styled.div`
     font-weight: bold;
     font-size: 11.5px;
   }
-`;
+`
 
 export const MessageLists = styled.ul`
   display: flex;
@@ -146,7 +146,7 @@ export const MessageLists = styled.ul`
       }
     }
   }
-`;
+`
 
 export const ChatInput = styled.div`
   position: fixed;
@@ -184,4 +184,4 @@ export const ChatInput = styled.div`
     background-color: black;
     color: white;
   }
-`;
+`

@@ -7,23 +7,23 @@ import {
   MessageChatLists,
   ChatMessageInfo,
   MessageLists,
-  ChatInput,
-} from "./index.styles";
-import { IconSend } from "@tabler/icons-react";
-import { Input } from "@mantine/core";
-import { useNavigate } from "react-router-dom";
-import { Indicator, Avatar, Group } from "@mantine/core";
-import BlankProfilePic from "../../assets/images/user-profile-images/empty-profile-picture.jpg";
-type Props = {
-  isUserLoggedIn: boolean;
-};
-function Index({ isUserLoggedIn }: Props) {
-  const navigate = useNavigate();
+  ChatInput
+} from './index.styles'
+import { IconSend } from '@tabler/icons-react'
+import { Input, Indicator, Avatar, Group } from '@mantine/core'
+import { useNavigate } from 'react-router-dom'
+
+import BlankProfilePic from '../../assets/images/user-profile-images/empty-profile-picture.jpg'
+interface Props {
+  isUserLoggedIn: boolean
+}
+function Index ({ isUserLoggedIn }: Props) {
+  const navigate = useNavigate()
   return (
     <>
       <ChatMessageDetail>
         <MessageDetailItemsHeader>
-          <MessageDetailItemsHeaderSvg onClick={() => navigate(-1)} />
+          <MessageDetailItemsHeaderSvg onClick={() => { navigate(-1) }} />
           <MessageDetailItemsHeaderText>
             Profile name
           </MessageDetailItemsHeaderText>
@@ -192,7 +192,7 @@ function Index({ isUserLoggedIn }: Props) {
         </button>
       </ChatInput>
     </>
-  );
+  )
 }
 
-export default Index;
+export default Index

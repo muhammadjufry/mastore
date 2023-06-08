@@ -1,19 +1,19 @@
-import { HelpBody, PeopleQuestions } from "./index.styles";
-import PageHeader from "../PageHeader";
-import { Text, Input } from "@mantine/core";
-import { SpotlightProvider, spotlight } from "@mantine/spotlight";
-import type { SpotlightAction } from "@mantine/spotlight";
+import { HelpBody, PeopleQuestions } from './index.styles'
+import PageHeader from '../PageHeader'
+import { Text, Input } from '@mantine/core'
+import { SpotlightProvider, spotlight } from '@mantine/spotlight'
+import type { SpotlightAction } from '@mantine/spotlight'
 import {
   IconHome,
   IconDashboard,
   IconFileText,
-  IconSearch,
-} from "@tabler/icons-react";
-import { Link } from "react-router-dom";
+  IconSearch
+} from '@tabler/icons-react'
+import { Link } from 'react-router-dom'
 
-type Props = {};
+interface Props {}
 
-function Help({}: Props) {
+function Help ({}: Props) {
   return (
     <div className="pageDefaultStyle">
       <PageHeader pageName="Help" withCartIcon={true} />
@@ -27,8 +27,8 @@ function Help({}: Props) {
           icon={<IconSearch size={15} />}
           styles={() => ({
             input: {
-              border: "0.0625rem solid #ced4da !important",
-            },
+              border: '0.0625rem solid #ced4da !important'
+            }
           })}
         />
         <Text fw={600}>Some's people ask:</Text>
@@ -48,31 +48,31 @@ function Help({}: Props) {
         </PeopleQuestions>
       </HelpBody>
     </div>
-  );
+  )
 }
 
 const actions: SpotlightAction[] = [
   {
-    title: "Home",
-    description: "Get to home page",
-    onTrigger: () => console.log("Home"),
-    icon: <IconHome size="1.2rem" />,
+    title: 'Home',
+    description: 'Get to home page',
+    onTrigger: () => { console.log('Home') },
+    icon: <IconHome size="1.2rem" />
   },
   {
-    title: "Dashboard",
-    description: "Get full information about current system status",
-    onTrigger: () => console.log("Dashboard"),
-    icon: <IconDashboard size="1.2rem" />,
+    title: 'Dashboard',
+    description: 'Get full information about current system status',
+    onTrigger: () => { console.log('Dashboard') },
+    icon: <IconDashboard size="1.2rem" />
   },
   {
-    title: "Documentation",
-    description: "Visit documentation to lean more about all features",
-    onTrigger: () => console.log("Documentation"),
-    icon: <IconFileText size="1.2rem" />,
-  },
-];
+    title: 'Documentation',
+    description: 'Visit documentation to lean more about all features',
+    onTrigger: () => { console.log('Documentation') },
+    icon: <IconFileText size="1.2rem" />
+  }
+]
 
-function index() {
+function index () {
   return (
     <SpotlightProvider
       actions={actions}
@@ -83,7 +83,7 @@ function index() {
     >
       <Help />
     </SpotlightProvider>
-  );
+  )
 }
 
-export default index;
+export default index

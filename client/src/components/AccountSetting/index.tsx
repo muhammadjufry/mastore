@@ -1,16 +1,16 @@
-import PageHeader from "../PageHeader";
-import { UserSettingLists } from "./index.styles";
+import PageHeader from '../PageHeader'
+import { UserSettingLists } from './index.styles'
 
-type Props = {};
+interface Props {}
 
-function Index({}: Props) {
+function Index ({}: Props) {
   return (
     <>
       <PageHeader pageName="Setting" withCartIcon={true} />
-      <div style={{ padding: "0 20px" }}>
+      <div style={{ padding: '0 20px' }}>
         <div
           className="container pageDefaultStyle"
-          style={{ padding: "20px 0" }}
+          style={{ padding: '20px 0' }}
         >
           <UserSettingLists>
             <li>Account info</li>
@@ -25,7 +25,7 @@ function Index({}: Props) {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default Index;
+export default Index

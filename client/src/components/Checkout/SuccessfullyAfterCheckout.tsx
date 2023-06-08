@@ -1,18 +1,18 @@
-import ArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
-import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
+import ArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag'
 import {
   SuccessfullyAfterCheckoutHeader,
   SuccessfullyAfterCheckoutIcon,
   SuccessfullyAfterCheckoutBody,
-  SuccessfullyAfterCheckoutCheckOrder,
-} from "./successfullyAfterCheckout.styles";
-import DoneIcon from "../../assets/icons/successfully-after-checkout-done/done.webp";
-import { Link } from "react-router-dom";
-import PageHeader from "../PageHeader";
+  SuccessfullyAfterCheckoutCheckOrder
+} from './successfullyAfterCheckout.styles'
+import DoneIcon from '../../assets/icons/successfully-after-checkout-done/done.webp'
+import { Link } from 'react-router-dom'
+import PageHeader from '../PageHeader'
 
-type Props = {
-  isUserLoggedIn: boolean;
-};
+interface Props {
+  isUserLoggedIn: boolean
+}
 
 const SuccessfullyAfterCheckout = ({ isUserLoggedIn }: Props) => {
   return (
@@ -22,7 +22,7 @@ const SuccessfullyAfterCheckout = ({ isUserLoggedIn }: Props) => {
         withCartIcon={true}
         isUserLoggedIn={isUserLoggedIn}
       />
-      <div style={{ padding: "0 20px" }}>
+      <div style={{ padding: '0 20px' }}>
         <div className="container">
           <br />
           <SuccessfullyAfterCheckoutBody>
@@ -42,7 +42,7 @@ const SuccessfullyAfterCheckout = ({ isUserLoggedIn }: Props) => {
       </div>
       <br />
     </>
-  );
-};
+  )
+}
 
-export default SuccessfullyAfterCheckout;
+export default SuccessfullyAfterCheckout

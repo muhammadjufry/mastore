@@ -1,16 +1,16 @@
-import SellerPageHeader from "../SellerPageHeader";
-import { Text, Button } from "@mantine/core";
-import { AndsBody, ListAvailbleStore } from "./index.styles";
-import AmazonImg from "../../assets/images/dropship-online-store/amazon.svg";
-import AliExpressImg from "../../assets/images/dropship-online-store/aliExpress.svg";
-import EbayImg from "../../assets/images/dropship-online-store/ebay.svg";
-import WalmartImg from "../../assets/images/dropship-online-store/walmart.svg";
+import SellerPageHeader from '../SellerPageHeader'
+import { Text, Button } from '@mantine/core'
+import { AndsBody, ListAvailbleStore } from './index.styles'
+import AmazonImg from '../../assets/images/dropship-online-store/amazon.svg'
+import AliExpressImg from '../../assets/images/dropship-online-store/aliExpress.svg'
+import EbayImg from '../../assets/images/dropship-online-store/ebay.svg'
+import WalmartImg from '../../assets/images/dropship-online-store/walmart.svg'
 
-type Props = {
-  isUserLoggedIn: boolean;
-};
+interface Props {
+  isUserLoggedIn: boolean
+}
 
-function index({ isUserLoggedIn }: Props) {
+function index ({ isUserLoggedIn }: Props) {
   return (
     <>
       <SellerPageHeader pageName="Add another store" />
@@ -42,7 +42,7 @@ function index({ isUserLoggedIn }: Props) {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default index;
+export default index

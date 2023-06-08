@@ -1,31 +1,39 @@
-import { Link } from "react-router-dom";
-import ModeEditIcon from "@mui/icons-material/ModeEdit";
-import HelpIcon from "@mui/icons-material/Help";
-import ChatIcon from "@mui/icons-material/Chat";
-import PaymentsIcon from "@mui/icons-material/Payments";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import SettingsIcon from "@mui/icons-material/Settings";
-import LogoutIcon from "@mui/icons-material/Logout";
-import BlankProfilePic from "../../assets/images/user-profile-images/empty-profile-picture.jpg";
+import { Link, redirect } from 'react-router-dom'
+import ModeEditIcon from '@mui/icons-material/ModeEdit'
+import HelpIcon from '@mui/icons-material/Help'
+import ChatIcon from '@mui/icons-material/Chat'
+import PaymentsIcon from '@mui/icons-material/Payments'
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
+import SettingsIcon from '@mui/icons-material/Settings'
+import LogoutIcon from '@mui/icons-material/Logout'
+import BlankProfilePic from '../../assets/images/user-profile-images/empty-profile-picture.jpg'
 import {
   UserDashboardHeader,
   UserProfileInfo,
-  UserDashboardBody,
-} from "./index.styles";
+  UserDashboardBody
+} from './index.styles'
 
-import PageHeader from "../PageHeader";
-type Props = {
-  isUserLoggedIn: boolean;
-};
+import PageHeader from '../PageHeader'
+interface Props {
+  isUserLoggedIn: boolean
+}
 
-function Index({ isUserLoggedIn }: Props) {
+function Index ({ isUserLoggedIn }: Props) {
   const { name, following, follower } = JSON.parse(
-    localStorage.getItem("userInfo")!
-  )[0];
+    localStorage.getItem('userInfo')!
+  )[0]
+
+  const logout = () => {
+    localStorage.removeItem('userInfo')
+    localStorage.removeItem('user-token-login')
+
+    redirect('/')
+  }
+
   return (
     <>
       <PageHeader withCartIcon={false} isUserLoggedIn={isUserLoggedIn} />
-      <div style={{ padding: "0 20px" }}>
+      <div style={{ padding: '0 20px' }}>
         <div className="container">
           <UserDashboardHeader>
             <div className="row2">
@@ -83,8 +91,8 @@ function Index({ isUserLoggedIn }: Props) {
                   Help <HelpIcon />
                 </Link>
               </li>
-              <li>
-                <Link to="/user/logout">
+              <li onClick={() => { logout() }}>
+                <Link to="/">
                   Logout <LogoutIcon />
                 </Link>
               </li>
@@ -93,7 +101,7 @@ function Index({ isUserLoggedIn }: Props) {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default Index;
+export default Index

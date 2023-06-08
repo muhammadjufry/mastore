@@ -1,12 +1,12 @@
-import React from "react";
-import Payment from "../components/Payment";
+import React from 'react'
+import Payment from '../components/Payment'
 
-type Props = {
-  isUserLoggedIn: boolean;
-};
-
-function Index({ isUserLoggedIn }: Props) {
-  return <Payment />;
+interface Props {
+  isUserLoggedIn: boolean
 }
 
-export default Index;
+function Index ({ isUserLoggedIn }: Props) {
+  return <Payment />
+}
+
+export default Index

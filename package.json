@@ -1,11 +1,11 @@
 {
-  "name": "dropship-shop",
+  "name": "mastore",
   "description": "",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "backend-dev": "cd client && npm run dev",
-    "frontend-dev": "cd server && nodemon src/index.ts",
+    "backend-dev": "cd server && nodemon src/index.ts",
+    "frontend-dev": "cd client && npm run dev",
     "dev": "concurrently \"npm:backend-dev\" \"npm:frontend-dev\""
   },
   "repository": {
@@ -20,6 +20,15 @@
   },
   "homepage": "https://github.com/muhammadjufry/mastore#readme",
   "devDependencies": {
-    "concurrently": "^8.0.1"
+    "concurrently": "^8.0.1",
+    "eslint": "^8.41.0"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.7.15",
+    "apollo-server": "^3.12.0",
+    "apollo-server-core": "^3.12.0",
+    "cluster": "^0.7.7",
+    "graphql": "^16.6.0",
+    "os": "^0.1.2"
   }
 }

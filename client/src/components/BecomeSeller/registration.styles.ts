@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const FormRegistration = styled.form`
   display: flex;
@@ -14,7 +14,7 @@ const FormRegistration = styled.form`
     font-size: 14px;
     color: grey;
   }
-`;
+`
 
 const ListAvailbleStore = styled.ul`
   margin-top: 10px;
@@ -44,6 +44,6 @@ const ListAvailbleStore = styled.ul`
     width: 100%;
     object-fit: contain;
   }
-`;
+`
 
-export { FormRegistration, ListAvailbleStore };
+export { FormRegistration, ListAvailbleStore }

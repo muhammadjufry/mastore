@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const CheckoutItemsList = styled.ul`
   display: flex;
@@ -13,7 +13,7 @@ const CheckoutItemsList = styled.ul`
     height: 100px;
     background-color: rgb(250, 250, 250);
   }
-`;
+`
 
 const CheckoutItemLeftSection = styled.div`
   height: 100%;
@@ -25,27 +25,27 @@ const CheckoutItemLeftSection = styled.div`
     cursor: pointer;
     background-color: white;
   }
-`;
+`
 
 const CheckoutItemCenterSection = styled.div`
   display: flex;
   flex-direction: column;
   gap: 5px;
   font-size: 15px;
-`;
+`
 
 const CheckoutItemTitle = styled.div`
   font-weight: bold;
-`;
+`
 
 const CheckoutItemVariants = styled.div`
   color: grey;
   font-size: 13.5px;
-`;
+`
 
 const CheckoutItemPrice = styled.div`
   font-weight: bold;
-`;
+`
 
 const CheckoutItemRightSection = styled.div`
   display: flex;
@@ -59,7 +59,7 @@ const CheckoutItemRightSection = styled.div`
     height: 20px;
     fill: black;
   }
-`;
+`
 
 const CheckoutShippingMethodLists = styled.div`
   display: flex;
@@ -74,7 +74,7 @@ const CheckoutShippingMethodLists = styled.div`
     padding: 7px 15px;
     gap: 13px;
   }
-`;
+`
 
 const CheckoutShippingMethodLeftSection = styled.div`
   height: 50px;
@@ -85,22 +85,22 @@ const CheckoutShippingMethodLeftSection = styled.div`
     object-fit: contain;
     border-radius: 10px;
   }
-`;
+`
 
 const CheckoutShippingMethodCenterSection = styled.div`
   display: flex;
   flex-direction: column;
   font-size: 15px;
-`;
+`
 
 const ShippingMethodName = styled.div`
   font-weight: bold;
-`;
+`
 
 const ShippingMethodDeliveryDays = styled.div`
   font-size: 13px;
   color: grey;
-`;
+`
 
 const CheckoutShippingMethodRightSection = styled.div`
   display: flex;
@@ -110,7 +110,7 @@ const CheckoutShippingMethodRightSection = styled.div`
   font-weight: bold;
   margin-top: 8px;
   margin-left: auto;
-`;
+`
 
 const CheckoutPaymentMethodLists = styled.div`
   display: flex;
@@ -132,11 +132,11 @@ const CheckoutPaymentMethodLists = styled.div`
       border-radius: 10px;
     }
   }
-`;
+`
 
 const PaymentMethodName = styled.div`
   font-size: 14px;
-`;
+`
 
 const CheckoutItemsTotal = styled.div`
   display: flex;
@@ -153,18 +153,18 @@ const CheckoutItemsTotal = styled.div`
       font-weight: 500;
     }
   }
-`;
+`
 
 const CheckoutItemTotalPrice = styled.div`
   font-weight: 600;
   font-size: 15px;
-`;
+`
 
 const CheckoutItemTotalRightSection = styled.div`
   display: flex;
   align-items: center;
   gap: 5px;
-`;
+`
 
 const CheckoutBuyNow = styled.div`
   width: 100%;
@@ -181,7 +181,7 @@ const CheckoutBuyNow = styled.div`
     margin-left: auto;
     padding: 10px 15px;
   }
-`;
+`
 
 export {
   CheckoutItemsList,
@@ -202,5 +202,5 @@ export {
   CheckoutItemsTotal,
   CheckoutItemTotalPrice,
   CheckoutItemTotalRightSection,
-  CheckoutBuyNow,
-};
+  CheckoutBuyNow
+}

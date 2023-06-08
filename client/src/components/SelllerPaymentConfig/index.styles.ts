@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const PaymentSetting = styled.div`
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-`;
+`
 
 export const PaymentEmailSetting = styled.div`
   span {
@@ -30,11 +30,11 @@ export const PaymentEmailSetting = styled.div`
       color: grey;
     }
   }
-`;
+`
 
 export const SendEmailToMyAccount = styled.div`
   margin-top: 5px;
-`;
+`
 
 export const SpanAndRadio = styled.div`
   display: flex;
@@ -44,7 +44,7 @@ export const SpanAndRadio = styled.div`
   span {
     font-size: 11px;
   }
-`;
+`
 
 export const SendEmailToMyAccountAndRadio = styled.div`
   display: flex;
@@ -55,7 +55,7 @@ export const SendEmailToMyAccountAndRadio = styled.div`
     font-size: 11px;
   }
   margin-top: 5px;
-`;
+`
 
 export const RecentlyUsedPaymentMethods = styled.div`
   display: flex;
@@ -72,13 +72,13 @@ export const RecentlyUsedPaymentMethods = styled.div`
       height: 40px;
     }
   }
-`;
+`
 
 export const PaymentMethodInfo = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-`;
+`
 
 export const PaymentMethodHeader = styled.div`
   display: flex;
@@ -90,7 +90,7 @@ export const PaymentMethodHeader = styled.div`
     height: 15px;
     cursor: pointer;
   }
-`;
+`
 
 export const PaymentMethodInfoSpan = styled.span`
   display: flex;
@@ -98,7 +98,7 @@ export const PaymentMethodInfoSpan = styled.span`
   font-size: 11px;
   gap: 5px;
   color: grey;
-`;
+`
 
 export const PaymentMethodInfoA = styled.a`
   display: flex;
@@ -111,20 +111,20 @@ export const PaymentMethodInfoA = styled.a`
     width: 13px;
     height: 13px;
   }
-`;
+`
 
 export const PaymentMethodActions = styled.div`
   display: flex;
   flex-direction: column;
   gap: 3px;
   margin-top: 3px;
-`;
+`
 
 export const PaymentMethodNumber = styled.div`
   font-weight: bold;
   color: black !important;
   font-size: 13px !important;
-`;
+`
 
 export const PaymentSettingButton = styled.button`
   width: fit-content;
@@ -140,4 +140,4 @@ export const PaymentSettingButton = styled.button`
     background-color: white;
     color: black;
   }
-`;
+`

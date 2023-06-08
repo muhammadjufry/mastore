@@ -1,17 +1,17 @@
-import SuccessfullyAfterCheckout from "../components/Checkout/SuccessfullyAfterCheckout";
-import ProductLists from "../components/HomePage/ProductLists";
+import SuccessfullyAfterCheckout from '../components/Checkout/SuccessfullyAfterCheckout'
+import ProductLists from '../components/HomePage/ProductLists'
 
-type Props = {
-  isUserLoggedIn: boolean;
-};
+interface Props {
+  isUserLoggedIn: boolean
+}
 
-function AfterCheckout({ isUserLoggedIn }: Props) {
+function AfterCheckout ({ isUserLoggedIn }: Props) {
   return (
     <>
       <SuccessfullyAfterCheckout isUserLoggedIn={isUserLoggedIn} />
       <ProductLists />
     </>
-  );
+  )
 }
 
-export default AfterCheckout;
+export default AfterCheckout

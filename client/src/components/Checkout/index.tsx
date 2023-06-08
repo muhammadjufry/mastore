@@ -1,4 +1,4 @@
-import PageHeader from "../PageHeader";
+import PageHeader from '../PageHeader'
 import {
   CheckoutItemsList,
   CheckoutItemLeftSection,
@@ -18,82 +18,82 @@ import {
   CheckoutItemsTotal,
   CheckoutItemTotalPrice,
   CheckoutItemTotalRightSection,
-  CheckoutBuyNow,
-} from "./index.styles";
-import RemoveCircleIcon from "@mui/icons-material/RemoveCircle";
-import AddCircleIcon from "@mui/icons-material/AddCircle";
-import LaptopImg from "../../assets/images/product-images/laptop.webp";
-import JneImg from "../../assets/images/shipping-method/jne.jpg";
-import CreditcardImg from "../../assets/images/payment-method/credit-card.svg";
-import CodImg from "../../assets/images/payment-method/cod.jpg";
-import BanktransferImg from "../../assets/images/payment-method/bank-transfer.svg";
-import EwalletImg from "../../assets/images/payment-method/e-wallet.png";
-import { forwardRef } from "react";
-import { Group, Avatar, Text, Select } from "@mantine/core";
-import { Link } from "react-router-dom";
+  CheckoutBuyNow
+} from './index.styles'
+import RemoveCircleIcon from '@mui/icons-material/RemoveCircle'
+import AddCircleIcon from '@mui/icons-material/AddCircle'
+import LaptopImg from '../../assets/images/product-images/laptop.webp'
+import JneImg from '../../assets/images/shipping-method/jne.jpg'
+import CreditcardImg from '../../assets/images/payment-method/credit-card.svg'
+import CodImg from '../../assets/images/payment-method/cod.jpg'
+import BanktransferImg from '../../assets/images/payment-method/bank-transfer.svg'
+import EwalletImg from '../../assets/images/payment-method/e-wallet.png'
+import { forwardRef } from 'react'
+import { Group, Avatar, Text, Select } from '@mantine/core'
+import { Link } from 'react-router-dom'
 
-type Props = {
-  isUserLoggedIn: boolean;
-};
+interface Props {
+  isUserLoggedIn: boolean
+}
 
 const ShippingMethodOptions = [
   {
     image: JneImg,
-    label: "JNE",
-    value: "JNE",
-    description: "3 - 5 days to arrived $5",
+    label: 'JNE',
+    value: 'JNE',
+    description: '3 - 5 days to arrived $5'
   },
   {
     image: JneImg,
-    label: "JNE",
-    value: "JNE",
-    description: "3 - 5 days to arrived $5",
+    label: 'JNE',
+    value: 'JNE',
+    description: '3 - 5 days to arrived $5'
   },
   {
     image: JneImg,
-    label: "JNE",
-    value: "JNE",
-    description: "3 - 5 days to arrived $5",
+    label: 'JNE',
+    value: 'JNE',
+    description: '3 - 5 days to arrived $5'
   },
   {
     image: JneImg,
-    label: "JNE",
-    value: "JNE",
-    description: "3 - 5 days to arrived $5",
-  },
-];
+    label: 'JNE',
+    value: 'JNE',
+    description: '3 - 5 days to arrived $5'
+  }
+]
 
 const PaymentMethodOptions = [
   {
     image: CreditcardImg,
-    label: "Credit Card",
-    value: "Credit Card",
-    description: "Pay using credit card",
+    label: 'Credit Card',
+    value: 'Credit Card',
+    description: 'Pay using credit card'
   },
   {
     image: CodImg,
-    label: "Cash on delivery",
-    value: "Cash on delivery",
-    description: "Pay when your order has been arrived",
+    label: 'Cash on delivery',
+    value: 'Cash on delivery',
+    description: 'Pay when your order has been arrived'
   },
   {
     image: BanktransferImg,
-    label: "Bank Transfer",
-    value: "Bank Transfer",
-    description: "Pay using bank transfer",
+    label: 'Bank Transfer',
+    value: 'Bank Transfer',
+    description: 'Pay using bank transfer'
   },
   {
     image: EwalletImg,
-    label: "E-wallet",
-    value: "E-wallet",
-    description: "Pay using E-wallet",
-  },
-];
+    label: 'E-wallet',
+    value: 'E-wallet',
+    description: 'Pay using E-wallet'
+  }
+]
 
-interface ItemProps extends React.ComponentPropsWithoutRef<"div"> {
-  image: string;
-  label: string;
-  description: string;
+interface ItemProps extends React.ComponentPropsWithoutRef<'div'> {
+  image: string
+  label: string
+  description: string
 }
 
 const SelectItem = forwardRef<HTMLDivElement, ItemProps>(
@@ -111,7 +111,7 @@ const SelectItem = forwardRef<HTMLDivElement, ItemProps>(
       </Group>
     </div>
   )
-);
+)
 
 const Index = ({ isUserLoggedIn }: Props) => {
   return (
@@ -122,10 +122,10 @@ const Index = ({ isUserLoggedIn }: Props) => {
         isUserLoggedIn={isUserLoggedIn}
       />
       <br />
-      <div style={{ padding: "0 20px" }}>
+      <div style={{ padding: '0 20px' }}>
         <div
           className="container"
-          style={{ display: "flex", flexDirection: "column", gap: "20px" }}
+          style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}
         >
           <CheckoutItemsList>
             <li>
@@ -227,7 +227,7 @@ const Index = ({ isUserLoggedIn }: Props) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Index;
+export default Index

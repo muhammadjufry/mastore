@@ -3,7 +3,6 @@ import db from "../database/database";
 import bcrypt from "bcrypt";
 import crypto from "crypto";
 import SendEmail from "../utils/sendEmail";
-import circularJSON from "circular-json";
 const router = express.Router();
 
 router.post("/user/register", async (req, res) => {

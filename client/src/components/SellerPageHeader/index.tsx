@@ -1,19 +1,19 @@
-import { useNavigate } from "react-router-dom";
-import { Indicator, Avatar, Group } from "@mantine/core";
-import { SellerPageHeader, SellerPageHeaderIcon } from "./index.styles";
-import Header from "../HomePage/Header";
+import { useNavigate } from 'react-router-dom'
+import { Indicator, Avatar, Group } from '@mantine/core'
+import { SellerPageHeader, SellerPageHeaderIcon } from './index.styles'
+import Header from '../HomePage/Header'
 
-type Props = {
-  pageName: string;
-  sellerImg?: string;
-};
+interface Props {
+  pageName: string
+  sellerImg?: string
+}
 
-function Index({ pageName, sellerImg }: Props) {
-  const navigate = useNavigate();
+function Index ({ pageName, sellerImg }: Props) {
+  const navigate = useNavigate()
   return (
     <div className="header">
       <SellerPageHeader className="pageHeader">
-        <SellerPageHeaderIcon onClick={() => navigate(-1)} />
+        <SellerPageHeaderIcon onClick={() => { navigate(-1) }} />
         <span>{pageName}</span>
         <Group position="left">
           <Indicator color="teal">
@@ -23,8 +23,8 @@ function Index({ pageName, sellerImg }: Props) {
               color="green"
               styles={() => ({
                 root: {
-                  cursor: "pointer",
-                },
+                  cursor: 'pointer'
+                }
               })}
             >
               TQ
@@ -34,7 +34,7 @@ function Index({ pageName, sellerImg }: Props) {
       </SellerPageHeader>
       <Header />
     </div>
-  );
+  )
 }
 
-export default Index;
+export default Index

@@ -3,39 +3,39 @@ import {
   OrderItemsLi,
   OrderItemTitle,
   OrderItemVariants,
-  OrderItemPrice,
-} from "./index.styles";
-import LaptopImg from "../../assets/images/product-images/laptop.webp";
-import MacbookImg from "../../assets/images/product-images/macbook.webp";
-import HeadsetImg from "../../assets/images/product-images/headset.png";
-import { Tabs } from "@mantine/core";
-import PageHeader from "../PageHeader";
-import { Link } from "react-router-dom";
-type Props = {};
+  OrderItemPrice
+} from './index.styles'
+import LaptopImg from '../../assets/images/product-images/laptop.webp'
+import MacbookImg from '../../assets/images/product-images/macbook.webp'
+import HeadsetImg from '../../assets/images/product-images/headset.png'
+import { Tabs } from '@mantine/core'
+import PageHeader from '../PageHeader'
+import { Link } from 'react-router-dom'
+interface Props {}
 
-function Index({}: Props) {
+function Index ({}: Props) {
   return (
     <>
       <PageHeader pageName="Order" withCartIcon={true} />
-      <div style={{ padding: "0 10px" }}>
+      <div style={{ padding: '0 10px' }}>
         <div
           className="container pageDefaultStyle"
-          style={{ padding: "20px 0" }}
+          style={{ padding: '20px 0' }}
         >
           <Tabs
             defaultValue="first"
             styles={() => ({
               tabsList: {
-                flexWrap: "nowrap",
+                flexWrap: 'nowrap'
               },
               tab: {
-                whiteSpace: "normal",
+                whiteSpace: 'normal'
               },
               tabLabel: {
-                textAlign: "center",
-                lineHeight: "19px",
-                fontSize: "12px",
-              },
+                textAlign: 'center',
+                lineHeight: '19px',
+                fontSize: '12px'
+              }
             })}
           >
             <Tabs.List grow>
@@ -116,7 +116,7 @@ function Index({}: Props) {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default Index;
+export default Index

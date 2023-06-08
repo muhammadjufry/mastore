@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const UserSettingLists = styled.ul`
   display: flex;
@@ -10,6 +10,6 @@ const UserSettingLists = styled.ul`
     font-size: 12px;
     cursor: pointer;
   }
-`;
+`
 
-export { UserSettingLists };
+export { UserSettingLists }

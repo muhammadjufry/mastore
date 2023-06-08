@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components'
 const LoadingScreen = styled.div`
   width: 100%;
   height: 100%;
@@ -13,7 +13,7 @@ const LoadingScreen = styled.div`
   &.hide {
     display: none;
   }
-`;
+`
 
 const LoaderAnimation = keyframes`
 0%,
@@ -48,7 +48,7 @@ const LoaderAnimation = keyframes`
 87.5% {
   box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em,
     0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
-}`;
+}`
 
 const Loader = styled.span`
   color: #000;
@@ -60,6 +60,6 @@ const Loader = styled.span`
   text-indent: -9999em;
   animation: ${LoaderAnimation} 1.3s infinite linear;
   transform: translateZ(0);
-`;
+`
 
-export { LoadingScreen, Loader };
+export { LoadingScreen, Loader }

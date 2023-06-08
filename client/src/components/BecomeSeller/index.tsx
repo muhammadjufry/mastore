@@ -1,19 +1,19 @@
-import { Image, Description } from "./index.styles";
-import PageHeader from "../PageHeader";
-import BecomeSellerImg from "../../assets/images/become-seller/becomeSeller.svg";
-import { Link } from "react-router-dom";
-import { Button } from "@mantine/core";
+import { Image, Description } from './index.styles'
+import PageHeader from '../PageHeader'
+import BecomeSellerImg from '../../assets/images/become-seller/becomeSeller.svg'
+import { Link } from 'react-router-dom'
+import { Button } from '@mantine/core'
 
-type Props = {};
+interface Props {}
 
-function Index({}: Props) {
+function Index ({}: Props) {
   return (
     <>
       <PageHeader pageName="Become Seller" withCartIcon={true} />
-      <div style={{ padding: "0 20px" }}>
+      <div style={{ padding: '0 20px' }}>
         <div
           className="container pageDefaultStyle"
-          style={{ padding: "20px 0" }}
+          style={{ padding: '20px 0' }}
         >
           <Image src={BecomeSellerImg} alt="" />
           <Description>
@@ -22,13 +22,13 @@ function Index({}: Props) {
           </Description>
           <Link
             to="/user/become-seller/registration"
-            style={{ width: "fit-content", margin: "0 auto" }}
+            style={{ width: 'fit-content', margin: '0 auto' }}
           >
             <Button
               styles={() => ({
                 root: {
-                  width: "fit-content",
-                },
+                  width: 'fit-content'
+                }
               })}
               color="teal"
             >
@@ -38,7 +38,7 @@ function Index({}: Props) {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default Index;
+export default Index

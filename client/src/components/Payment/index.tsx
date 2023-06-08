@@ -1,6 +1,6 @@
-import PageHeader from "../PageHeader";
-import ModeEditIcon from "@mui/icons-material/ModeEdit";
-import DeleteIcon from "@mui/icons-material/Delete";
+import PageHeader from '../PageHeader'
+import ModeEditIcon from '@mui/icons-material/ModeEdit'
+import DeleteIcon from '@mui/icons-material/Delete'
 import {
   PaymentEmailSetting,
   SendEmailToMyAccountAndRadio,
@@ -12,21 +12,21 @@ import {
   PaymentMethodInfoA,
   PaymentMethodActions,
   PaymentMethodNumber,
-  PaymentSettingButton,
-} from "./index.styles";
-import VisaImg from "../../assets/images/payment-method/visa.png";
+  PaymentSettingButton
+} from './index.styles'
+import VisaImg from '../../assets/images/payment-method/visa.png'
 
-type Props = {};
+interface Props {}
 
-function Payment({}: Props) {
+function Payment ({}: Props) {
   return (
     <>
       <PageHeader pageName="Payment Setting" withCartIcon={true} />
 
-      <div style={{ padding: "0 20px" }}>
+      <div style={{ padding: '0 20px' }}>
         <div
           className="container pageDefaultStyle"
-          style={{ padding: "20px 0" }}
+          style={{ padding: '20px 0' }}
         >
           <PaymentEmailSetting>
             <h5>Contact email</h5>
@@ -102,7 +102,7 @@ function Payment({}: Props) {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default Payment;
+export default Payment

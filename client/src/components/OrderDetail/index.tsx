@@ -1,5 +1,5 @@
-import PageHeader from "../PageHeader";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
+import PageHeader from '../PageHeader'
+import LocationOnIcon from '@mui/icons-material/LocationOn'
 import {
   OrderDetailItem,
   OrderDetailItemLeft,
@@ -14,30 +14,30 @@ import {
   OrderItemTotalSpan,
   OrderItemTotalPrice,
   OrderItemTotalRight,
-  OrderBuyNowButton,
-} from "./index.styles";
+  OrderBuyNowButton
+} from './index.styles'
 
-import LaptopImg from "../../assets/images/product-images/laptop.webp";
-import JneImg from "../../assets/images/shipping-method/jne.png";
-import CreditcardImg from "../../assets/images/payment-method/credit-card.svg";
+import LaptopImg from '../../assets/images/product-images/laptop.webp'
+import JneImg from '../../assets/images/shipping-method/jne.png'
+import CreditcardImg from '../../assets/images/payment-method/credit-card.svg'
 
-import { Timeline, Text } from "@mantine/core";
+import { Timeline, Text } from '@mantine/core'
 import {
   IconMapPin,
   IconPackageImport,
-  IconCreditCard,
-} from "@tabler/icons-react";
+  IconCreditCard
+} from '@tabler/icons-react'
 
-type Props = {};
+interface Props {}
 
-function Index({}: Props) {
+function Index ({}: Props) {
   return (
     <>
       <PageHeader pageName="Order Detail" withCartIcon={true} />
-      <div style={{ padding: "0 20px" }}>
+      <div style={{ padding: '0 20px' }}>
         <div
           className="container pageDefaultStyle"
-          style={{ padding: "20px 0" }}
+          style={{ padding: '20px 0' }}
         >
           <OrderDetailItem>
             <OrderDetailItemLeft>
@@ -102,7 +102,7 @@ function Index({}: Props) {
           </OrderItemTotal>
           <OrderBuyNowButton
             onClick={() =>
-              (window.location.href = "/successfully-after-checkout")
+              (window.location.href = '/successfully-after-checkout')
             }
           >
             Cancel order
@@ -110,7 +110,7 @@ function Index({}: Props) {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default Index;
+export default Index

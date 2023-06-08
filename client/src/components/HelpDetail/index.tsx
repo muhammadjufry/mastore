@@ -1,11 +1,11 @@
-import { PeopleQuestionDetail, HelpAnswer } from "./index.styles";
-import PageHeader from "../PageHeader";
-import { Avatar } from "@mantine/core";
-type Props = {
-  isUserLoggedIn: boolean;
-};
+import { PeopleQuestionDetail, HelpAnswer } from './index.styles'
+import PageHeader from '../PageHeader'
+import { Avatar } from '@mantine/core'
+interface Props {
+  isUserLoggedIn: boolean
+}
 
-function Index({ isUserLoggedIn }: Props) {
+function Index ({ isUserLoggedIn }: Props) {
   return (
     <div className="pageDefaultStyle">
       <PageHeader pageName="User question" withCartIcon={true} />
@@ -25,7 +25,7 @@ function Index({ isUserLoggedIn }: Props) {
         </HelpAnswer>
       </PeopleQuestionDetail>
     </div>
-  );
+  )
 }
 
-export default Index;
+export default Index

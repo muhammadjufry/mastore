@@ -1,9 +1,9 @@
-import styled from "styled-components";
-import { Stack as StackForm } from "@mantine/core";
+import styled from 'styled-components'
+import { Stack as StackForm } from '@mantine/core'
 
 export const Stack = styled(StackForm)`
   gap: 0.5rem;
-`;
+`
 
 export const FormLinks = styled.div`
   display: flex;
@@ -12,4 +12,4 @@ export const FormLinks = styled.div`
   .mantine-ymbk1u {
     text-align: left;
   }
-`;
+`

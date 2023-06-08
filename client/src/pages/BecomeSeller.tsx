@@ -1,11 +1,11 @@
-import BecomeSellerDashboard from "../components/BecomeSeller/";
+import BecomeSellerDashboard from '../components/BecomeSeller/'
 
-type Props = {
-  isUserLoggedIn: boolean;
-};
-
-function BecomeSeller({ isUserLoggedIn }: Props) {
-  return <BecomeSellerDashboard />;
+interface Props {
+  isUserLoggedIn: boolean
 }
 
-export default BecomeSeller;
+function BecomeSeller ({ isUserLoggedIn }: Props) {
+  return <BecomeSellerDashboard />
+}
+
+export default BecomeSeller

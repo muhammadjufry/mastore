@@ -1,4 +1,4 @@
-import SellerPageHeader from "../SellerPageHeader";
+import SellerPageHeader from '../SellerPageHeader'
 import {
   Input,
   PasswordInput,
@@ -6,16 +6,16 @@ import {
   Textarea,
   Avatar,
   FileInput,
-  rem,
-} from "@mantine/core";
-import { IconUpload } from "@tabler/icons-react";
-import { EditSellerProfile, SellerPic } from "./index.styles";
+  rem
+} from '@mantine/core'
+import { IconUpload } from '@tabler/icons-react'
+import { EditSellerProfile, SellerPic } from './index.styles'
 
-type Props = {
-  isUserLoggedIn: boolean;
-};
+interface Props {
+  isUserLoggedIn: boolean
+}
 
-function index({ isUserLoggedIn }: Props) {
+function index ({ isUserLoggedIn }: Props) {
   return (
     <>
       <SellerPageHeader pageName="Edit seller profile" />
@@ -30,8 +30,8 @@ function index({ isUserLoggedIn }: Props) {
                   color="green"
                   styles={() => ({
                     root: {
-                      cursor: "pointer",
-                    },
+                      cursor: 'pointer'
+                    }
                   })}
                 >
                   TQ
@@ -39,8 +39,8 @@ function index({ isUserLoggedIn }: Props) {
                 <FileInput
                   styles={() => ({
                     root: {
-                      width: "fit-content",
-                    },
+                      width: 'fit-content'
+                    }
                   })}
                   placeholder="Seller picture"
                   icon={<IconUpload size={rem(14)} />}
@@ -59,11 +59,11 @@ function index({ isUserLoggedIn }: Props) {
                 value="youremail@email.com"
                 styles={() => ({
                   input: {
-                    "&": {
-                      backgroundColor: "rgb(240, 240, 240)",
-                      border: "1px solid rgb(240, 240, 240) !important",
-                    },
-                  },
+                    '&': {
+                      backgroundColor: 'rgb(240, 240, 240)',
+                      border: '1px solid rgb(240, 240, 240) !important'
+                    }
+                  }
                 })}
               />
             </Input.Wrapper>
@@ -80,8 +80,8 @@ function index({ isUserLoggedIn }: Props) {
             <Button
               styles={(theme) => ({
                 root: {
-                  width: "fit-content",
-                },
+                  width: 'fit-content'
+                }
               })}
               color="dark"
               radius="sm"
@@ -93,7 +93,7 @@ function index({ isUserLoggedIn }: Props) {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default index;
+export default index

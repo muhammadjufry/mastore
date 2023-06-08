@@ -1,19 +1,19 @@
-import React from "react";
-import SellerPageHeader from "../SellerPageHeader";
-import { SellerSettingLists } from "./index.styles";
+import React from 'react'
+import SellerPageHeader from '../SellerPageHeader'
+import { SellerSettingLists } from './index.styles'
 
-type Props = {
-  isUserLoggedIn: boolean;
-};
+interface Props {
+  isUserLoggedIn: boolean
+}
 
-function index({ isUserLoggedIn }: Props) {
+function index ({ isUserLoggedIn }: Props) {
   return (
     <>
       <SellerPageHeader pageName="Seller Settings" />
-      <div style={{ padding: "0 20px" }}>
+      <div style={{ padding: '0 20px' }}>
         <div
           className="container pageDefaultStyle"
-          style={{ padding: "20px 0" }}
+          style={{ padding: '20px 0' }}
         >
           <SellerSettingLists>
             <li>Seller info</li>
@@ -29,7 +29,7 @@ function index({ isUserLoggedIn }: Props) {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default index;
+export default index

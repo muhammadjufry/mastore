@@ -1,10 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const AndsBody = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
-`;
+`
 
 export const ListAvailbleStore = styled.ul`
   margin-top: 10px;
@@ -34,4 +34,4 @@ export const ListAvailbleStore = styled.ul`
     width: 100%;
     object-fit: contain;
   }
-`;
+`

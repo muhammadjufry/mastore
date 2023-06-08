@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react'
 
-type Props = {
-  children: React.ReactNode;
-};
-
-function Layout({ children }: Props) {
-  return <div>{children}</div>;
+interface Props {
+  children: React.ReactNode
 }
 
-export default Layout;
+function Layout ({ children }: Props) {
+  return <div>{children}</div>
+}
+
+export default Layout

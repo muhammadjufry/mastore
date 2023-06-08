@@ -5,19 +5,19 @@ import {
   OrderItemTitle,
   OrderItemVariants,
   UserOrderItem,
-  OrderItemPrice,
-} from "./index.styles";
-import MacbookImg from "../../assets/images/product-images/macbook.webp";
-import HeadsetImg from "../../assets/images/product-images/headset.png";
-import { Tabs } from "@mantine/core";
-import SellerPageHeader from "../SellerPageHeader";
-import { Link } from "react-router-dom";
+  OrderItemPrice
+} from './index.styles'
+import MacbookImg from '../../assets/images/product-images/macbook.webp'
+import HeadsetImg from '../../assets/images/product-images/headset.png'
+import { Tabs } from '@mantine/core'
+import SellerPageHeader from '../SellerPageHeader'
+import { Link } from 'react-router-dom'
 
-type Props = {
-  isUserLoggedIn: boolean;
-};
+interface Props {
+  isUserLoggedIn: boolean
+}
 
-function index({ isUserLoggedIn }: Props) {
+function index ({ isUserLoggedIn }: Props) {
   return (
     <>
       <SellerPageHeader pageName="Order" />
@@ -27,16 +27,16 @@ function index({ isUserLoggedIn }: Props) {
             defaultValue="first"
             styles={() => ({
               tabsList: {
-                flexWrap: "nowrap",
+                flexWrap: 'nowrap'
               },
               tab: {
-                whiteSpace: "normal",
+                whiteSpace: 'normal'
               },
               tabLabel: {
-                textAlign: "center",
-                lineHeight: "19px",
-                fontSize: "12px",
-              },
+                textAlign: 'center',
+                lineHeight: '19px',
+                fontSize: '12px'
+              }
             })}
           >
             <Tabs.List grow>
@@ -120,7 +120,7 @@ function index({ isUserLoggedIn }: Props) {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default index;
+export default index

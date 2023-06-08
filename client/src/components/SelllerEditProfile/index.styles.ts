@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 export const EditSellerProfile = styled.form`
   display: flex;
   flex-direction: column;
@@ -14,10 +14,10 @@ export const EditSellerProfile = styled.form`
       font-size: 14px;
     }
   }
-`;
+`
 
 export const SellerPic = styled.div`
   display: flex;
   flex-direction: row !important;
   gap: 15px !important;
-`;
+`

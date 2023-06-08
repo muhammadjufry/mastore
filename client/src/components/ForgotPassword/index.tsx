@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react'
 
-type Props = {};
+interface Props {}
 
-function index({}: Props) {
-  return <div>index</div>;
+function index ({}: Props) {
+  return <div>index</div>
 }
 
-export default index;
+export default index

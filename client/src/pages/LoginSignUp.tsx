@@ -1,11 +1,11 @@
-import Header from "../components/HomePage/Header";
-import LoginSignUpForm from "../components/LoginSignUp";
+import Header from '../components/HomePage/Header'
+import LoginSignUpForm from '../components/LoginSignUp'
 
-type Props = {
-  isUserLoggedIn: boolean;
-};
+interface Props {
+  isUserLoggedIn: boolean
+}
 
-function Login({ isUserLoggedIn }: Props) {
+function Login ({ isUserLoggedIn }: Props) {
   return (
     <>
       <Header isUserLoggedIn={isUserLoggedIn} />
@@ -15,7 +15,7 @@ function Login({ isUserLoggedIn }: Props) {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default Login;
+export default Login

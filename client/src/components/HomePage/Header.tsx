@@ -1,10 +1,10 @@
-import { useDisclosure } from "@mantine/hooks";
-import { IconSearch, IconLogin } from "@tabler/icons-react";
-import { Autocomplete } from "@mantine/core";
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { useDisclosure } from '@mantine/hooks'
+import { IconSearch, IconLogin } from '@tabler/icons-react'
+import { Autocomplete } from '@mantine/core'
+import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import AccountCircleIcon from '@mui/icons-material/AccountCircle'
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 import {
   Header as HeaderComponent,
   Row1,
@@ -16,18 +16,18 @@ import {
   Row2,
   Search,
   FormSearch,
-  Burger,
-} from "./header.styles";
-type Props = {
-  isUserLoggedIn: boolean;
-};
+  Burger
+} from './header.styles'
+interface Props {
+  isUserLoggedIn: boolean
+}
 
-function Header({ isUserLoggedIn }: Props) {
-  console.log(isUserLoggedIn);
-  const [value, setValue] = useState("");
-  const [opened, { toggle }] = useDisclosure(false);
-  const searchListdata = ["laptop", "macbook"];
-  const label = opened ? "Close navigation" : "Open navigation";
+function Header ({ isUserLoggedIn }: Props) {
+  console.log(isUserLoggedIn)
+  const [value, setValue] = useState('')
+  const [opened, { toggle }] = useDisclosure(false)
+  const searchListdata = ['laptop', 'macbook']
+  const label = opened ? 'Close navigation' : 'Open navigation'
   return (
     <HeaderComponent>
       <div className="container">
@@ -47,10 +47,10 @@ function Header({ isUserLoggedIn }: Props) {
             <Search>
               <FormSearch method="get">
                 <Autocomplete
-                  style={{ width: "100%" }}
+                  style={{ width: '100%' }}
                   value={value}
                   icon={
-                    <IconSearch size="1rem" style={{ marginLeft: "3px" }} />
+                    <IconSearch size="1rem" style={{ marginLeft: '3px' }} />
                   }
                   onChange={setValue}
                   placeholder="Search product name..."
@@ -63,19 +63,23 @@ function Header({ isUserLoggedIn }: Props) {
           <Right>
             <Icons>
               <Link
-                to={`/${isUserLoggedIn === false ? "login_or_signup" : "user"}`}
+                to={`/${!isUserLoggedIn ? 'login_or_signup' : 'user'}`}
               >
-                {isUserLoggedIn === false ? (
+                {!isUserLoggedIn
+                  ? (
                   <IconLogin />
-                ) : (
+                    )
+                  : (
                   <AccountCircleIcon />
-                )}
+                    )}
               </Link>
-              {isUserLoggedIn === true ? (
+              {isUserLoggedIn
+                ? (
                 <Link to="/user/cart">
                   <ShoppingCartIcon />
                 </Link>
-              ) : null}
+                  )
+                : null}
             </Icons>
           </Right>
         </Row1>
@@ -84,7 +88,7 @@ function Header({ isUserLoggedIn }: Props) {
         <Search>
           <FormSearch method="get">
             <Autocomplete
-              style={{ width: "100%" }}
+              style={{ width: '100%' }}
               value={value}
               icon={<IconSearch size="1rem" />}
               onChange={setValue}
@@ -95,7 +99,7 @@ function Header({ isUserLoggedIn }: Props) {
         </Search>
       </Row2>
     </HeaderComponent>
-  );
+  )
 }
 
-export default Header;
+export default Header

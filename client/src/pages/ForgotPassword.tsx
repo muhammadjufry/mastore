@@ -1,15 +1,15 @@
-import ForgotPasswordForm from "../components/ForgotPassword";
+import ForgotPasswordForm from '../components/ForgotPassword'
 
-type Props = {
-  isUserLoggedIn: boolean;
-};
+interface Props {
+  isUserLoggedIn: boolean
+}
 
-function ForgotPassword({ isUserLoggedIn }: Props) {
+function ForgotPassword ({ isUserLoggedIn }: Props) {
   return (
     <div className="pageDefaultStyle">
       <ForgotPasswordForm />
     </div>
-  );
+  )
 }
 
-export default ForgotPassword;
+export default ForgotPassword

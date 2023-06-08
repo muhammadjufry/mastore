@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { Link } from 'react-router-dom'
+import LocationOnIcon from '@mui/icons-material/LocationOn'
 import {
   MostPopularProductsSection,
   PopularProductsList,
@@ -13,13 +13,13 @@ import {
   ProductStar,
   LocationInfo,
   ProductStarIcon as StarIcon,
-  ProductSold,
-} from "./mostPopularProducts.styles";
-import MacbookImg from "../../assets/images/product-images/laptop.webp";
+  ProductSold
+} from './mostPopularProducts.styles'
+import MacbookImg from '../../assets/images/product-images/laptop.webp'
 
-type Props = {};
+interface Props {}
 
-function MostPopularProducts({}: Props) {
+function MostPopularProducts ({}: Props) {
   return (
     <MostPopularProductsSection>
       <div className="container">
@@ -311,7 +311,7 @@ function MostPopularProducts({}: Props) {
         </PopularProductsList>
       </div>
     </MostPopularProductsSection>
-  );
+  )
 }
 
-export default MostPopularProducts;
+export default MostPopularProducts

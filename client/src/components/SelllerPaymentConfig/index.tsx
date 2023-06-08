@@ -1,6 +1,6 @@
-import SellerPageHeader from "../SellerPageHeader";
-import { IconCircleCheckFilled, IconEdit } from "@tabler/icons-react";
-import { Button } from "@mantine/core";
+import SellerPageHeader from '../SellerPageHeader'
+import { IconCircleCheckFilled, IconEdit } from '@tabler/icons-react'
+import { Button } from '@mantine/core'
 import {
   PaymentSetting,
   PaymentEmailSetting,
@@ -13,15 +13,15 @@ import {
   PaymentMethodInfoA,
   PaymentMethodActions,
   PaymentMethodNumber,
-  PaymentSettingButton,
-} from "./index.styles";
-import VisaImg from "../../assets/images/payment-method/visa.png";
+  PaymentSettingButton
+} from './index.styles'
+import VisaImg from '../../assets/images/payment-method/visa.png'
 
-type Props = {
-  isUserLoggedIn: boolean;
-};
+interface Props {
+  isUserLoggedIn: boolean
+}
 
-function Payment({ isUserLoggedIn }: Props) {
+function Payment ({ isUserLoggedIn }: Props) {
   return (
     <>
       <SellerPageHeader pageName="Payment Setting" />
@@ -81,8 +81,8 @@ function Payment({ isUserLoggedIn }: Props) {
             size="xs"
             styles={() => ({
               root: {
-                width: "fit-content",
-              },
+                width: 'fit-content'
+              }
             })}
           >
             Add new payment method
@@ -90,7 +90,7 @@ function Payment({ isUserLoggedIn }: Props) {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default Payment;
+export default Payment

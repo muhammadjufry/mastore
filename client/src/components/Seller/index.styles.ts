@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { IconEdit } from "@tabler/icons-react";
+import styled from 'styled-components'
+import { IconEdit } from '@tabler/icons-react'
 
 export const SellerAccount = styled.div`
   display: flex;
@@ -10,11 +10,11 @@ export const SellerAccount = styled.div`
     display: flex;
     flex-direction: column;
   }
-`;
+`
 
 export const SellerAccountInfoTitle = styled.h1`
   font-size: 15px;
-`;
+`
 export const SellerRating = styled.div`
   display: flex;
   align-items: center;
@@ -23,7 +23,7 @@ export const SellerRating = styled.div`
   span {
     font-size: 12px;
   }
-`;
+`
 export const SellerRatingAndSold = styled.div`
   display: flex;
   align-items: center;
@@ -32,20 +32,20 @@ export const SellerRatingAndSold = styled.div`
   span {
     font-size: 11px;
   }
-`;
+`
 
 export const SellerFfling = styled.span`
   font-size: 11px;
   color: grey;
-`;
+`
 
 export const IconEditButton = styled(IconEdit)`
   position: absolute;
   right: 0;
   cursor: pointer;
-`;
+`
 
-export const SellerDashboardLinks = styled.ul``;
+export const SellerDashboardLinks = styled.ul``
 
 export const SellerDashboardLink = styled.li`
   border-top: 1px solid #ced4da;
@@ -63,4 +63,4 @@ export const SellerDashboardLink = styled.li`
       height: 17px;
     }
   }
-`;
+`

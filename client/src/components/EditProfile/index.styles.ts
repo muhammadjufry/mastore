@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const UserProfile = styled.div`
   display: flex;
@@ -10,7 +10,7 @@ export const UserProfile = styled.div`
     object-fit: contain;
     border-radius: 50%;
   }
-`;
+`
 
 export const UserProfileInfo = styled.div`
   position: relative;
@@ -22,10 +22,10 @@ export const UserProfileInfo = styled.div`
   span {
     font-size: 12px;
   }
-`;
+`
 
 export const EditProfileInput = styled.form`
   display: flex;
   flex-direction: column;
   gap: 15px;
-`;
+`

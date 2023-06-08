@@ -1,7 +1,7 @@
-import { Text, Button } from "@mantine/core";
-import SellerPageHeader from "../SellerPageHeader";
-import { Link } from "react-router-dom";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { Text, Button } from '@mantine/core'
+import SellerPageHeader from '../SellerPageHeader'
+import { Link } from 'react-router-dom'
+import LocationOnIcon from '@mui/icons-material/LocationOn'
 import {
   SellerProducts,
   ProductItem,
@@ -14,29 +14,29 @@ import {
   ProductStar,
   LocationInfo,
   ProductStarIcon as StarIcon,
-  ProductSold,
-} from "./index.styles";
-import MacbookImg from "../../assets/images/product-images/laptop.webp";
-import { IconEdit, IconTrash } from "@tabler/icons-react";
-type Props = {
-  isUserLoggedIn: boolean;
-};
+  ProductSold
+} from './index.styles'
+import MacbookImg from '../../assets/images/product-images/laptop.webp'
+import { IconEdit, IconTrash } from '@tabler/icons-react'
+interface Props {
+  isUserLoggedIn: boolean
+}
 
-function index({ isUserLoggedIn }: Props) {
+function index ({ isUserLoggedIn }: Props) {
   return (
     <>
       <SellerPageHeader pageName="Seller Products" />
       <div className="pageDefaultStyle">
         <div className="container">
-          <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <Text>Here's all of your product:</Text>
             <Link to="/seller/add-product">
               <Button
                 color="dark"
                 styles={() => ({
                   root: {
-                    width: "fit-content",
-                  },
+                    width: 'fit-content'
+                  }
                 })}
               >
                 Add new product
@@ -254,7 +254,7 @@ function index({ isUserLoggedIn }: Props) {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default index;
+export default index

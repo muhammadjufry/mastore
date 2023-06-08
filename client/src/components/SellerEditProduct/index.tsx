@@ -1,24 +1,24 @@
-import SellerPageHeader from "../SellerPageHeader";
-import { EditProduct } from "./index.styles";
-import { useState } from "react";
-import { Input, Button, NumberInput, Image, Text } from "@mantine/core";
-import { Dropzone, IMAGE_MIME_TYPE, FileWithPath } from "@mantine/dropzone";
-import { RichTextEditor, Link } from "@mantine/tiptap";
-import { useEditor } from "@tiptap/react";
-import Highlight from "@tiptap/extension-highlight";
-import StarterKit from "@tiptap/starter-kit";
-import Underline from "@tiptap/extension-underline";
-import TextAlign from "@tiptap/extension-text-align";
-import Superscript from "@tiptap/extension-superscript";
-import SubScript from "@tiptap/extension-subscript";
-type Props = {
-  isUserLoggedIn: boolean;
-};
+import SellerPageHeader from '../SellerPageHeader'
+import { EditProduct } from './index.styles'
+import { useState } from 'react'
+import { Input, Button, NumberInput, Image, Text } from '@mantine/core'
+import { Dropzone, IMAGE_MIME_TYPE, type FileWithPath } from '@mantine/dropzone'
+import { RichTextEditor, Link } from '@mantine/tiptap'
+import { useEditor } from '@tiptap/react'
+import Highlight from '@tiptap/extension-highlight'
+import StarterKit from '@tiptap/starter-kit'
+import Underline from '@tiptap/extension-underline'
+import TextAlign from '@tiptap/extension-text-align'
+import Superscript from '@tiptap/extension-superscript'
+import SubScript from '@tiptap/extension-subscript'
+interface Props {
+  isUserLoggedIn: boolean
+}
 
 const content =
-  '<h2>Product Tittle</h2><p>Product Description <a href="https://example.com/" rel="noopener noreferrer" target="_blank">Link</a> rest description</p><ul><li>List</li><li>List</li><li>List</li><li>List</li><li>List</li></ul>';
+  '<h2>Product Tittle</h2><p>Product Description <a href="https://example.com/" rel="noopener noreferrer" target="_blank">Link</a> rest description</p><ul><li>List</li><li>List</li><li>List</li><li>List</li><li>List</li></ul>'
 
-function index({ isUserLoggedIn }: Props) {
+function index ({ isUserLoggedIn }: Props) {
   const editor = useEditor({
     extensions: [
       StarterKit,
@@ -27,22 +27,22 @@ function index({ isUserLoggedIn }: Props) {
       Superscript,
       SubScript,
       Highlight,
-      TextAlign.configure({ types: ["heading", "paragraph"] }),
+      TextAlign.configure({ types: ['heading', 'paragraph'] })
     ],
-    content,
-  });
-  const [files, setFiles] = useState<FileWithPath[]>([]);
+    content
+  })
+  const [files, setFiles] = useState<FileWithPath[]>([])
 
   const previews = files.map((file, index) => {
-    const imageUrl = URL.createObjectURL(file);
+    const imageUrl = URL.createObjectURL(file)
     return (
       <Image
         key={index}
         src={imageUrl}
-        imageProps={{ onLoad: () => URL.revokeObjectURL(imageUrl) }}
+        imageProps={{ onLoad: () => { URL.revokeObjectURL(imageUrl) } }}
       />
-    );
-  });
+    )
+  })
   return (
     <>
       <SellerPageHeader pageName="Edit product" />
@@ -53,7 +53,7 @@ function index({ isUserLoggedIn }: Props) {
               <label htmlFor="Product Image:">Product Image:</label>
               <Dropzone accept={IMAGE_MIME_TYPE} onDrop={setFiles}>
                 <Text align="center">
-                  {files.length > 0 ? previews : "Drop images here"}
+                  {files.length > 0 ? previews : 'Drop images here'}
                 </Text>
               </Dropzone>
             </div>
@@ -63,11 +63,11 @@ function index({ isUserLoggedIn }: Props) {
             <NumberInput
               label="Product price:"
               defaultValue={1000}
-              parser={(value) => value.replace(/\$\s?|(,*)/g, "")}
+              parser={(value) => value.replace(/\$\s?|(,*)/g, '')}
               formatter={(value) =>
                 !Number.isNaN(parseFloat(value))
-                  ? `$ ${value}`.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")
-                  : "$ "
+                  ? `$ ${value}`.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')
+                  : '$ '
               }
             />
             <div className="editProductInput">
@@ -121,7 +121,7 @@ function index({ isUserLoggedIn }: Props) {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default index;
+export default index

@@ -6,22 +6,22 @@ import {
   SellerFfling,
   IconEditButton,
   SellerDashboardLinks,
-  SellerDashboardLink,
-} from "./index.styles";
-import PageHeader from "../PageHeader";
-import { Link } from "react-router-dom";
-import { Avatar, Rating, Group } from "@mantine/core";
+  SellerDashboardLink
+} from './index.styles'
+import PageHeader from '../PageHeader'
+import { Link } from 'react-router-dom'
+import { Avatar, Rating, Group } from '@mantine/core'
 
-type Props = {};
+interface Props {}
 
-function Index({}: Props) {
+function Index ({}: Props) {
   return (
     <>
       <PageHeader withCartIcon={false} />
-      <div style={{ padding: "0 20px" }}>
+      <div style={{ padding: '0 20px' }}>
         <div
           className="container pageDefaultStyle"
-          style={{ padding: "20px 0" }}
+          style={{ padding: '20px 0' }}
         >
           <SellerAccount>
             <Avatar radius="xl" size={65} color="green">
@@ -79,7 +79,7 @@ function Index({}: Props) {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default Index;
+export default Index

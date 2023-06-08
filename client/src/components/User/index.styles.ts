@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const UserDashboardHeader = styled.div`
   padding: 20px 0;
@@ -32,7 +32,7 @@ export const UserDashboardHeader = styled.div`
   @media (max-width: 768px) {
     padding-top: 0;
   }
-`;
+`
 
 export const UserProfileInfo = styled.div`
   position: relative;
@@ -44,7 +44,7 @@ export const UserProfileInfo = styled.div`
   span {
     font-size: 13px;
   }
-`;
+`
 
 export const UserDashboardBody = styled.div`
   .links {
@@ -70,4 +70,4 @@ export const UserDashboardBody = styled.div`
       }
     }
   }
-`;
+`

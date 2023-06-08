@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const SuccessfullyAfterCheckoutHeader = styled.div`
   display: flex;
@@ -16,7 +16,7 @@ export const SuccessfullyAfterCheckoutHeader = styled.div`
     font-size: 17px;
     font-weight: 600;
   }
-`;
+`
 
 export const SuccessfullyAfterCheckoutIcon = styled.div`
   display: flex;
@@ -39,7 +39,7 @@ export const SuccessfullyAfterCheckoutIcon = styled.div`
     padding: 1px 3px;
     border-radius: 6px;
   }
-`;
+`
 
 export const SuccessfullyAfterCheckoutBody = styled.div`
   display: flex;
@@ -56,7 +56,7 @@ export const SuccessfullyAfterCheckoutBody = styled.div`
     font-size: 17px;
     line-height: 33px;
   }
-`;
+`
 
 export const SuccessfullyAfterCheckoutCheckOrder = styled.button`
   width: 100%;
@@ -73,4 +73,4 @@ export const SuccessfullyAfterCheckoutCheckOrder = styled.button`
     border-radius: 5px;
     padding: 10px 15px;
   }
-`;
+`

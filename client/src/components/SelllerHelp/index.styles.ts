@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const SellerHelpBody = styled.div`
   display: flex;
@@ -11,7 +11,7 @@ export const SellerHelpBody = styled.div`
     font-size: 17px;
     text-shadow: 0 5px 5px rgb(0, 0, 0, 0.1);
   }
-`;
+`
 
 export const PeopleQuestions = styled.ul`
   list-style: unset;
@@ -26,4 +26,4 @@ export const PeopleQuestions = styled.ul`
     padding: 5px 7px;
     cursor: pointer;
   }
-`;
+`

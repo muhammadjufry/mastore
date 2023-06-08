@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const ProductDetailHeader = styled.div`
   @media (max-width: 768px) {
@@ -19,7 +19,7 @@ export const ProductDetailHeader = styled.div`
   header {
     display: block;
   }
-`;
+`
 
 export const ProductDetail = styled.div`
   display: flex;
@@ -43,7 +43,7 @@ export const ProductDetail = styled.div`
       height: 270px;
     }
   }
-`;
+`
 
 export const ProductInfo = styled.div`
   display: flex;
@@ -63,21 +63,21 @@ export const ProductInfo = styled.div`
     font-weight: 700;
     font-size: 24px;
   }
-`;
+`
 
 export const RatingAndSold = styled.div`
   display: flex;
   align-items: center;
   gap: 7px;
-`;
+`
 
 export const ProductRating = styled.div`
   display: flex;
   align-items: center;
   gap: 3px;
-`;
+`
 
-export const ProductSold = styled.div``;
+export const ProductSold = styled.div``
 
 export const ProductType = styled.ul`
   display: flex;
@@ -90,7 +90,7 @@ export const ProductType = styled.ul`
     align-items: center;
     gap: 10px;
   }
-`;
+`
 
 export const Buttons = styled.div`
   display: flex;
@@ -111,12 +111,12 @@ export const Buttons = styled.div`
       color: white;
     }
   }
-`;
+`
 
 export const Quantity = styled.div`
   display: flex;
   align-items: center;
-`;
+`
 
 export const ProductDescription = styled.div`
   p {
@@ -126,7 +126,7 @@ export const ProductDescription = styled.div`
     padding: 0 20px;
   }
   margin-bottom: 20px;
-`;
+`
 
 export const SellerProfile = styled.div`
   display: flex;
@@ -135,7 +135,7 @@ export const SellerProfile = styled.div`
   background-color: white;
   width: 100%;
   padding: 15px 20px;
-`;
+`
 
 export const SellerInfo = styled.div`
   .sellerName {
@@ -147,13 +147,13 @@ export const SellerInfo = styled.div`
     gap: 5px;
     align-items: center;
   }
-`;
+`
 
 export const ProductReview = styled.div`
   border-top: 2px solid rgb(230, 230, 230);
   margin-bottom: 20px;
   padding: 20px;
-`;
+`
 
 export const ProductReviewHeader = styled.div`
   display: flex;
@@ -161,7 +161,7 @@ export const ProductReviewHeader = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 10px;
-`;
+`
 
 export const ProductReviewRating = styled.div`
   display: flex;
@@ -191,7 +191,7 @@ export const ProductReviewRating = styled.div`
     font-size: 22px;
     font-weight: bold;
   }
-`;
+`
 
 export const ProductReviewRate = styled.ul`
   display: flex;
@@ -224,7 +224,7 @@ export const ProductReviewRate = styled.ul`
       font-size: 12px;
     }
   }
-`;
+`
 
 export const ProductReviewMessages = styled.ul`
   padding: 30px 0;
@@ -275,7 +275,7 @@ export const ProductReviewMessages = styled.ul`
       font-size: 12px !important;
     }
   }
-`;
+`
 
 export const ProductAddReview = styled.div`
   font-size: 14px;
@@ -293,4 +293,4 @@ export const ProductAddReview = styled.div`
       font-weight: bold;
     }
   }
-`;
+`

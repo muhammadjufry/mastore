@@ -1,30 +1,30 @@
-import styled from "styled-components";
-import ArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
+import styled from 'styled-components'
+import ArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
 
 export const OrderListItems = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 20px;
-`;
+`
 
 export const OrderListItemsHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-`;
+`
 
 export const OrderListItemsHeaderSvg = styled(ArrowLeftIcon)`
   width: 25px;
   height: 25px;
   fill: black;
-`;
+`
 
 export const OrderListItemsHeaderSpan = styled.span`
   font-size: 17px;
   font-weight: 600;
-`;
+`
 
 export const OrderListItemsIcon = styled.div`
   display: flex;
@@ -33,7 +33,7 @@ export const OrderListItemsIcon = styled.div`
   background-color: white;
   padding: 7px;
   border-radius: 5px;
-`;
+`
 
 export const OrderListItemsIconSpan = styled.span`
   display: flex;
@@ -47,12 +47,12 @@ export const OrderListItemsIconSpan = styled.span`
   color: white;
   padding: 1px 3px;
   border-radius: 6px;
-`;
+`
 
 export const OrderItemsType = styled.div`
   display: flex;
   align-items: center;
-`;
+`
 
 export const OrderItemsTypeLi = styled.li`
   width: 100%;
@@ -73,14 +73,14 @@ export const OrderItemsTypeLi = styled.li`
     color: white;
     border-color: black;
   }
-`;
+`
 
 export const OrderItems = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
   margin-top: 10px;
-`;
+`
 
 export const OrderItemsLi = styled.li`
   display: flex;
@@ -150,23 +150,23 @@ export const OrderItemsLi = styled.li`
       }
     }
   }
-`;
+`
 
 export const OrderItemTitle = styled.span`
   font-weight: 500;
   font-size: 13.5px;
-`;
+`
 
 export const OrderItemVariants = styled.span`
   color: grey;
   font-size: 11px;
-`;
+`
 export const UserOrderItem = styled.span`
   color: grey;
   font-size: 11px;
-`;
+`
 
 export const OrderItemPrice = styled.span`
   font-weight: bold;
   font-size: 13px;
-`;
+`

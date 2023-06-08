@@ -1,12 +1,12 @@
-import SellerDashboard from "../components/Seller";
-import React from "react";
+import SellerDashboard from '../components/Seller'
+import React from 'react'
 
-type Props = {
-  isUserLoggedIn: boolean;
-};
-
-function Seller({ isUserLoggedIn }: Props) {
-  return <SellerDashboard />;
+interface Props {
+  isUserLoggedIn: boolean
 }
 
-export default Seller;
+function Seller ({ isUserLoggedIn }: Props) {
+  return <SellerDashboard />
+}
+
+export default Seller
